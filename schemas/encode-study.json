@@ -42,7 +42,8 @@
                     {"name": "submitted_by", "datatype": "string"},
 
                     {"name": "age_units", "datatype": "string"},
-                    {"name": "age", "datatype": "integer"},
+                    {"name": "min_age", "datatype": "float"},
+                    {"name": "max_age", "datatype": "float"},
                     {"name": "created_at", "datatype": "timestamp"},
                     {"name": "ethnicity", "datatype": "string"},
                     {"name": "lab", "datatype": "string"},
