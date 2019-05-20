@@ -8,7 +8,7 @@
                 "columns": [
                     {"name": "persistent_id", "datatype": "string"},
                     {"name": "chromosome", "datatype": "string"},
-                    {"name": "position", "datatype": "int64"},
+                    {"name": "position", "datatype": "integer"},
                     {"name": "reference", "datatype": "string"},
                     {"name": "alt", "datatype": "string"},
                     {"name": "eaf", "datatype": "float"},
@@ -22,7 +22,7 @@
                 "columns": [
                     {"name": "persistent_id", "datatype": "string"},
                     {"name": "chromosome", "datatype": "string"},
-                    {"name": "position", "datatype": "int64"},
+                    {"name": "position", "datatype": "integer"},
                     {"name": "reference", "datatype": "string"},
                     {"name": "alt", "datatype": "string"},
                     {"name": "phenotype", "datatype": "string"},
