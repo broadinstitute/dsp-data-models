@@ -6,7 +6,7 @@
             {
                 "name": "frequency_analysis",
                 "columns": [
-                    {"name": "id", "datatype": "string"},
+                    {"name": "persistent_id", "datatype": "string"},
                     {"name": "chromosome", "datatype": "string"},
                     {"name": "position", "datatype": "int64"},
                     {"name": "reference", "datatype": "string"},
@@ -20,7 +20,7 @@
             {
                 "name": "ancestry_specific_meta_analysis",
                 "columns": [
-                    {"name": "id", "datatype": "string"},
+                    {"name": "persistent_id", "datatype": "string"},
                     {"name": "chromosome", "datatype": "string"},
                     {"name": "position", "datatype": "int64"},
                     {"name": "reference", "datatype": "string"},
@@ -36,7 +36,7 @@
             {
                 "name": "trans_ethnic_meta_analysis",
                 "columns": [
-                    {"name": "id", "datatype": "string"},
+                    {"name": "persistent_id", "datatype": "string"},
                     {"name": "chromosome", "datatype": "string"},
                     {"name": "position", "datatype": "integer"},
                     {"name": "reference", "datatype": "string"},
@@ -52,7 +52,7 @@
             {
                 "name": "feature_consequence",
                 "columns": [
-                    {"name": "id", "datatype": "string"},
+                    {"name": "persistent_id", "datatype": "string"},
                     {"name": "biotype", "datatype": "string"},
                     {"name": "consequence_terms", "datatype": "string"},
                     {"name": "impact", "datatype": "string"},
@@ -64,7 +64,7 @@
             {
                 "name": "transcript_consequence",
                 "columns": [
-                    {"name": "id", "datatype": "string"},
+                    {"name": "persistent_id", "datatype": "string"},
                     {"name": "amino_acids", "datatype": "string"},
                     {"name": "biotype", "datatype": "string"},
 
@@ -225,61 +225,61 @@
         ],
         "relationships": [
             {
-                "name": "frequency_ethnicity_meta",
-                "from": {"table": "frequency_analysis", "column": "id", "cardinality": "one"},
-                "to": {"table": "ancestry_specific_meta_analysis", "column": "id", "cardinality": "one"}
+                "name": "frequency_analysis_to_ancestry_specific_meta_analysis",
+                "from": {"table": "frequency_analysis", "column": "persistent_id", "cardinality": "one"},
+                "to": {"table": "ancestry_specific_meta_analysis", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "frequency_trans_ethnicity_meta",
-                "from": {"table": "frequency_analysis", "column": "id", "cardinality": "many"},
-                "to": {"table": "trans_ethnic_meta_analysis", "column": "id", "cardinality": "one"}
+                "name": "frequency_analysis_to_trans_ethnic_meta_analysis",
+                "from": {"table": "frequency_analysis", "column": "persistent_id", "cardinality": "many"},
+                "to": {"table": "trans_ethnic_meta_analysis", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "frequency_feature_consequence",
-                "from": {"table": "frequency_analysis", "column": "id", "cardinality": "many"},
-                "to": {"table": "feature_consequence", "column": "id", "cardinality": "one"}
+                "name": "frequency_analysis_to_feature_consequence",
+                "from": {"table": "frequency_analysis", "column": "persistent_id", "cardinality": "many"},
+                "to": {"table": "feature_consequence", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "frequency_transcript_consequence",
-                "from": {"table": "frequency_analysis", "column": "id", "cardinality": "many"},
-                "to": {"table": "transcript_consequence", "column": "id", "cardinality": "one"}
+                "name": "frequency_analysis_to_transcript_consequence",
+                "from": {"table": "frequency_analysis", "column": "persistent_id", "cardinality": "many"},
+                "to": {"table": "transcript_consequence", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "ethnicity_trans_ethnicity_meta",
-                "from": {"table": "ancestry_specific_meta_analysis", "column": "id", "cardinality": "many"},
-                "to": {"table": "trans_ethnic_meta_analysis", "column": "id", "cardinality": "one"}
+                "name": "ancestry_specific_meta_analysis_to_trans_ethnic_meta_analysis",
+                "from": {"table": "ancestry_specific_meta_analysis", "column": "persistent_id", "cardinality": "many"},
+                "to": {"table": "trans_ethnic_meta_analysis", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "ethnicity_meta_feature_consequence",
-                "from": {"table": "ancestry_specific_meta_analysis", "column": "id", "cardinality": "many"},
-                "to": {"table": "feature_consequence", "column": "id", "cardinality": "one"}
+                "name": "ancestry_specific_meta_analysis_to_feature_consequence",
+                "from": {"table": "ancestry_specific_meta_analysis", "column": "persistent_id", "cardinality": "many"},
+                "to": {"table": "feature_consequence", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "ethnicity_meta_transcript_consequence",
-                "from": {"table": "ancestry_specific_meta_analysis", "column": "id", "cardinality": "many"},
-                "to": {"table": "transcript_consequence", "column": "id", "cardinality": "one"}
+                "name": "ancestry_specific_meta_analysis_to_transcript_consequence",
+                "from": {"table": "ancestry_specific_meta_analysis", "column": "persistent_id", "cardinality": "many"},
+                "to": {"table": "transcript_consequence", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "trans_ethnicity_meta_feature_consequence",
-                "from": {"table": "trans_ethnic_meta_analysis", "column": "id", "cardinality": "many"},
-                "to": {"table": "feature_consequence", "column": "id", "cardinality": "one"}
+                "name": "trans_ethnic_meta_analysis_to_feature_consequence",
+                "from": {"table": "trans_ethnic_meta_analysis", "column": "persistent_id", "cardinality": "many"},
+                "to": {"table": "feature_consequence", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "trans_ethnicity_meta_transcript_consequence",
-                "from": {"table": "trans_ethnic_meta_analysis", "column": "id", "cardinality": "many"},
-                "to": {"table": "transcript_consequence", "column": "id", "cardinality": "one"}
+                "name": "trans_ethnic_meta_analysis_to_transcript_consequence",
+                "from": {"table": "trans_ethnic_meta_analysis", "column": "persistent_id", "cardinality": "many"},
+                "to": {"table": "transcript_consequence", "column": "persistent_id", "cardinality": "one"}
             },
             {
-                "name": "feature_consequence_transcript_consequence",
-                "from": {"table": "feature_consequence", "column": "id", "cardinality": "one"},
-                "to": {"table": "transcript_consequence", "column": "id", "cardinality": "one"}
+                "name": "feature_consequence_to_transcript_consequence",
+                "from": {"table": "feature_consequence", "column": "persistent_id", "cardinality": "one"},
+                "to": {"table": "transcript_consequence", "column": "persistent_id", "cardinality": "one"}
             }
         ],
         "assets": [
             {
                 "name": "Variant Frequency Analysis",
                 "rootTable": "frequency_analysis",
-                "rootColumn": "id",
+                "rootColumn": "persistent_id",
                 "tables": [
                     {"name": "frequency_analysis", "columns": []},
                     {"name": "ancestry_specific_meta_analysis", "columns": []},
@@ -288,22 +288,22 @@
                     {"name": "transcript_consequence", "columns": []}
                 ],
                 "follow": [
-                    "frequency_ethnicity_meta",
-                    "frequency_trans_ethnicity_meta",
-                    "frequency_feature_consequence",
-                    "frequency_transcript_consequence",
-                    "ethnicity_trans_ethnicity_meta",
-                    "ethnicity_meta_feature_consequence",
-                    "ethnicity_meta_transcript_consequence",
-                    "trans_ethnicity_meta_feature_consequence",
-                    "trans_ethnicity_meta_transcript_consequence",
-                    "feature_consequence_transcript_consequence"
+                    "frequency_analysis_to_ancestry_specific_meta_analysis",
+                    "frequency_analysis_to_trans_ethnic_meta_analysis",
+                    "frequency_analysis_to_feature_consequence",
+                    "frequency_analysis_to_transcript_consequence",
+                    "ancestry_specific_meta_analysis_to_trans_ethnic_meta_analysis",
+                    "ancestry_specific_meta_analysis_to_feature_consequence",
+                    "ancestry_specific_meta_analysis_to_transcript_consequence",
+                    "trans_ethnic_meta_analysis_to_feature_consequence",
+                    "trans_ethnic_meta_analysis_to_transcript_consequence",
+                    "feature_consequence_to_transcript_consequence"
                 ]
             },
             {
                 "name": "Variant Meta Analysis (Ancestry-Specific)",
                 "rootTable": "ancestry_specific_meta_analysis",
-                "rootColumn": "id",
+                "rootColumn": "persistent_id",
                 "tables": [
                     {"name": "frequency_analysis", "columns": []},
                     {"name": "ancestry_specific_meta_analysis", "columns": []},
@@ -312,22 +312,22 @@
                     {"name": "transcript_consequence", "columns": []}
                 ],
                 "follow": [
-                    "frequency_ethnicity_meta",
-                    "frequency_trans_ethnicity_meta",
-                    "frequency_feature_consequence",
-                    "frequency_transcript_consequence",
-                    "ethnicity_trans_ethnicity_meta",
-                    "ethnicity_meta_feature_consequence",
-                    "ethnicity_meta_transcript_consequence",
-                    "trans_ethnicity_meta_feature_consequence",
-                    "trans_ethnicity_meta_transcript_consequence",
-                    "feature_consequence_transcript_consequence"
+                    "frequency_analysis_to_ancestry_specific_meta_analysis",
+                    "frequency_analysis_to_trans_ethnic_meta_analysis",
+                    "frequency_analysis_to_feature_consequence",
+                    "frequency_analysis_to_transcript_consequence",
+                    "ancestry_specific_meta_analysis_to_trans_ethnic_meta_analysis",
+                    "ancestry_specific_meta_analysis_to_feature_consequence",
+                    "ancestry_specific_meta_analysis_to_transcript_consequence",
+                    "trans_ethnic_meta_analysis_to_feature_consequence",
+                    "trans_ethnic_meta_analysis_to_transcript_consequence",
+                    "feature_consequence_to_transcript_consequence"
                 ]
             },
             {
                 "name": "Variant Meta Analysis (Trans-Ethnic)",
                 "rootTable": "trans_ethnic_meta_analysis",
-                "rootColumn": "id",
+                "rootColumn": "persistent_id",
                 "tables": [
                     {"name": "frequency_analysis", "columns": []},
                     {"name": "ancestry_specific_meta_analysis", "columns": []},
@@ -336,22 +336,22 @@
                     {"name": "transcript_consequence", "columns": []}
                 ],
                 "follow": [
-                    "frequency_ethnicity_meta",
-                    "frequency_trans_ethnicity_meta",
-                    "frequency_feature_consequence",
-                    "frequency_transcript_consequence",
-                    "ethnicity_trans_ethnicity_meta",
-                    "ethnicity_meta_feature_consequence",
-                    "ethnicity_meta_transcript_consequence",
-                    "trans_ethnicity_meta_feature_consequence",
-                    "trans_ethnicity_meta_transcript_consequence",
-                    "feature_consequence_transcript_consequence"
+                    "frequency_analysis_to_ancestry_specific_meta_analysis",
+                    "frequency_analysis_to_trans_ethnic_meta_analysis",
+                    "frequency_analysis_to_feature_consequence",
+                    "frequency_analysis_to_transcript_consequence",
+                    "ancestry_specific_meta_analysis_to_trans_ethnic_meta_analysis",
+                    "ancestry_specific_meta_analysis_to_feature_consequence",
+                    "ancestry_specific_meta_analysis_to_transcript_consequence",
+                    "trans_ethnic_meta_analysis_to_feature_consequence",
+                    "trans_ethnic_meta_analysis_to_transcript_consequence",
+                    "feature_consequence_to_transcript_consequence"
                 ]
             },
             {
                 "name": "Variant Feature Consequence",
                 "rootTable": "feature_consequence",
-                "rootColumn": "id",
+                "rootColumn": "persistent_id",
                 "tables": [
                     {"name": "frequency_analysis", "columns": []},
                     {"name": "ancestry_specific_meta_analysis", "columns": []},
@@ -360,22 +360,22 @@
                     {"name": "transcript_consequence", "columns": []}
                 ],
                 "follow": [
-                    "frequency_ethnicity_meta",
-                    "frequency_trans_ethnicity_meta",
-                    "frequency_feature_consequence",
-                    "frequency_transcript_consequence",
-                    "ethnicity_trans_ethnicity_meta",
-                    "ethnicity_meta_feature_consequence",
-                    "ethnicity_meta_transcript_consequence",
-                    "trans_ethnicity_meta_feature_consequence",
-                    "trans_ethnicity_meta_transcript_consequence",
-                    "feature_consequence_transcript_consequence"
+                    "frequency_analysis_to_ancestry_specific_meta_analysis",
+                    "frequency_analysis_to_trans_ethnic_meta_analysis",
+                    "frequency_analysis_to_feature_consequence",
+                    "frequency_analysis_to_transcript_consequence",
+                    "ancestry_specific_meta_analysis_to_trans_ethnic_meta_analysis",
+                    "ancestry_specific_meta_analysis_to_feature_consequence",
+                    "ancestry_specific_meta_analysis_to_transcript_consequence",
+                    "trans_ethnic_meta_analysis_to_feature_consequence",
+                    "trans_ethnic_meta_analysis_to_transcript_consequence",
+                    "feature_consequence_to_transcript_consequence"
                 ]
             },
             {
                 "name": "Variant Transcript Consequence",
                 "rootTable": "transcript_consequence",
-                "rootColumn": "id",
+                "rootColumn": "persistent_id",
                 "tables": [
                     {"name": "frequency_analysis", "columns": []},
                     {"name": "ancestry_specific_meta_analysis", "columns": []},
@@ -384,16 +384,16 @@
                     {"name": "transcript_consequence", "columns": []}
                 ],
                 "follow": [
-                    "frequency_ethnicity_meta",
-                    "frequency_trans_ethnicity_meta",
-                    "frequency_feature_consequence",
-                    "frequency_transcript_consequence",
-                    "ethnicity_trans_ethnicity_meta",
-                    "ethnicity_meta_feature_consequence",
-                    "ethnicity_meta_transcript_consequence",
-                    "trans_ethnicity_meta_feature_consequence",
-                    "trans_ethnicity_meta_transcript_consequence",
-                    "feature_consequence_transcript_consequence"
+                    "frequency_analysis_to_ancestry_specific_meta_analysis",
+                    "frequency_analysis_to_trans_ethnic_meta_analysis",
+                    "frequency_analysis_to_feature_consequence",
+                    "frequency_analysis_to_transcript_consequence",
+                    "ancestry_specific_meta_analysis_to_trans_ethnic_meta_analysis",
+                    "ancestry_specific_meta_analysis_to_feature_consequence",
+                    "ancestry_specific_meta_analysis_to_transcript_consequence",
+                    "trans_ethnic_meta_analysis_to_feature_consequence",
+                    "trans_ethnic_meta_analysis_to_transcript_consequence",
+                    "feature_consequence_to_transcript_consequence"
                 ]
             }
         ]
