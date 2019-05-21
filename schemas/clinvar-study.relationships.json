@@ -1,9 +1,9 @@
 {
   "relationships": [
     {
-      "name": "clinvar_variation_releases_to_release_type",
+      "name": "clinvar_variation_release_to_release_type",
       "from": {
-        "table": "clinvar_variation_releases",
+        "table": "clinvar_variation_release",
         "column": "clinvar_variation_release",
         "cardinality": "one"
       },
