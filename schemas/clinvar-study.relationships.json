@@ -9,7 +9,7 @@
       },
       "to": {
         "table": "release_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -22,7 +22,7 @@
       },
       "to": {
         "table": "variation_archive_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -35,7 +35,7 @@
       },
       "to": {
         "table": "type_record_history",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -48,7 +48,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -61,7 +61,7 @@
       },
       "to": {
         "table": "type_comment_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -74,7 +74,7 @@
       },
       "to": {
         "table": "replaced_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -87,7 +87,7 @@
       },
       "to": {
         "table": "type_record_history",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -100,7 +100,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -113,7 +113,7 @@
       },
       "to": {
         "table": "species",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -126,7 +126,7 @@
       },
       "to": {
         "table": "interpreted_record",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -139,7 +139,7 @@
       },
       "to": {
         "table": "type_allele",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -152,7 +152,7 @@
       },
       "to": {
         "table": "gene_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -165,7 +165,7 @@
       },
       "to": {
         "table": "gene",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -178,7 +178,7 @@
       },
       "to": {
         "table": "type_location",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -191,7 +191,7 @@
       },
       "to": {
         "table": "sequence_location",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -204,7 +204,7 @@
       },
       "to": {
         "table": "type_chromosome",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -217,7 +217,7 @@
       },
       "to": {
         "table": "type_chromosome_nr",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -230,7 +230,7 @@
       },
       "to": {
         "table": "type_chromosome_str",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -243,7 +243,7 @@
       },
       "to": {
         "table": "haploin_sufficiency",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -256,7 +256,7 @@
       },
       "to": {
         "table": "triplo_sensitivity",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -269,7 +269,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -282,7 +282,7 @@
       },
       "to": {
         "table": "type_status",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -295,7 +295,7 @@
       },
       "to": {
         "table": "type_gene_variant",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -308,7 +308,7 @@
       },
       "to": {
         "table": "type_location",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -321,7 +321,7 @@
       },
       "to": {
         "table": "type_names",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -334,7 +334,7 @@
       },
       "to": {
         "table": "hgvs_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -347,7 +347,7 @@
       },
       "to": {
         "table": "type_hgvs_expression",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -360,7 +360,7 @@
       },
       "to": {
         "table": "type_nucleotide_sequence_expression",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -373,7 +373,7 @@
       },
       "to": {
         "table": "type_protein_sequence_expression",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -386,7 +386,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -399,7 +399,7 @@
       },
       "to": {
         "table": "type_hgvs",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -412,7 +412,7 @@
       },
       "to": {
         "table": "type_aggregated_interpretation_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -425,7 +425,7 @@
       },
       "to": {
         "table": "type_aggregated_interpretation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -438,7 +438,7 @@
       },
       "to": {
         "table": "type_single_interpretation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -451,7 +451,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -464,7 +464,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -477,7 +477,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -490,7 +490,7 @@
       },
       "to": {
         "table": "id",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -503,7 +503,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -516,7 +516,7 @@
       },
       "to": {
         "table": "type_Interpretation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -529,7 +529,7 @@
       },
       "to": {
         "table": "type_description_history",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -542,7 +542,7 @@
       },
       "to": {
         "table": "condition_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -555,7 +555,7 @@
       },
       "to": {
         "table": "clin_asser_trait_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -568,7 +568,7 @@
       },
       "to": {
         "table": "clin_asser_trait_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -581,7 +581,7 @@
       },
       "to": {
         "table": "set_element_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -594,7 +594,7 @@
       },
       "to": {
         "table": "set_element_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -607,7 +607,7 @@
       },
       "to": {
         "table": "element_value",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -620,7 +620,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -633,7 +633,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -646,7 +646,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -659,7 +659,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -672,7 +672,7 @@
       },
       "to": {
         "table": "attribute",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -685,7 +685,7 @@
       },
       "to": {
         "table": "type_attribute",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -698,7 +698,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -711,7 +711,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -724,7 +724,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -737,7 +737,7 @@
       },
       "to": {
         "table": "trait_relationship",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -750,7 +750,7 @@
       },
       "to": {
         "table": "set_element_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -763,7 +763,7 @@
       },
       "to": {
         "table": "set_element_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -776,7 +776,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -789,7 +789,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -802,7 +802,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -815,7 +815,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -828,7 +828,7 @@
       },
       "to": {
         "table": "set_element_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -841,7 +841,7 @@
       },
       "to": {
         "table": "set_element_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -854,7 +854,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -867,7 +867,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -880,7 +880,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -893,7 +893,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -906,7 +906,7 @@
       },
       "to": {
         "table": "xref_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -919,7 +919,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -932,7 +932,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -945,7 +945,7 @@
       },
       "to": {
         "table": "type_functional_consequence",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -958,7 +958,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -971,7 +971,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -984,7 +984,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -997,7 +997,7 @@
       },
       "to": {
         "table": "allele_frequency_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1010,7 +1010,7 @@
       },
       "to": {
         "table": "allele_frequency",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1023,7 +1023,7 @@
       },
       "to": {
         "table": "global_minor_allele_frequency",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1036,7 +1036,7 @@
       },
       "to": {
         "table": "type_haplotype",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1049,7 +1049,7 @@
       },
       "to": {
         "table": "type_allele",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1062,7 +1062,7 @@
       },
       "to": {
         "table": "type_haplotype_variation_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1075,7 +1075,7 @@
       },
       "to": {
         "table": "type_names",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1088,7 +1088,7 @@
       },
       "to": {
         "table": "hgvs_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1101,7 +1101,7 @@
       },
       "to": {
         "table": "type_aggregated_interpretation_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1114,7 +1114,7 @@
       },
       "to": {
         "table": "type_functional_consequence",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1127,7 +1127,7 @@
       },
       "to": {
         "table": "xref_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1140,7 +1140,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1153,7 +1153,7 @@
       },
       "to": {
         "table": "type_genotype",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1166,7 +1166,7 @@
       },
       "to": {
         "table": "type_allele",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1179,7 +1179,7 @@
       },
       "to": {
         "table": "type_haplotype",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1192,7 +1192,7 @@
       },
       "to": {
         "table": "type_variation_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1205,7 +1205,7 @@
       },
       "to": {
         "table": "type_names",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1218,7 +1218,7 @@
       },
       "to": {
         "table": "hgvs_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1231,7 +1231,7 @@
       },
       "to": {
         "table": "type_functional_consequence",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1244,7 +1244,7 @@
       },
       "to": {
         "table": "type_aggregated_interpretation_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1257,7 +1257,7 @@
       },
       "to": {
         "table": "xref_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1270,7 +1270,7 @@
       },
       "to": {
         "table": "citation_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1283,7 +1283,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1296,7 +1296,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1309,7 +1309,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1322,7 +1322,7 @@
       },
       "to": {
         "table": "type_aggregate_review_status_value",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1335,7 +1335,7 @@
       },
       "to": {
         "table": "rcv_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1348,7 +1348,7 @@
       },
       "to": {
         "table": "type_rcv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1361,7 +1361,7 @@
       },
       "to": {
         "table": "interpreted_condition_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1374,7 +1374,7 @@
       },
       "to": {
         "table": "type_rcv_interpreted_condition",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1387,7 +1387,7 @@
       },
       "to": {
         "table": "replaced_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1400,7 +1400,7 @@
       },
       "to": {
         "table": "type_aggregated_interpretation_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1413,7 +1413,7 @@
       },
       "to": {
         "table": "clinical_assertion_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1426,7 +1426,7 @@
       },
       "to": {
         "table": "measure_trait_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1439,7 +1439,7 @@
       },
       "to": {
         "table": "clinvar_submission_id",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1452,7 +1452,7 @@
       },
       "to": {
         "table": "clinvar_accession",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1465,7 +1465,7 @@
       },
       "to": {
         "table": "submitter_identifiers",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1478,7 +1478,7 @@
       },
       "to": {
         "table": "additional_submitters",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1491,7 +1491,7 @@
       },
       "to": {
         "table": "submitter_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1504,7 +1504,7 @@
       },
       "to": {
         "table": "submitter_identifiers",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1517,7 +1517,7 @@
       },
       "to": {
         "table": "replaced_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1530,7 +1530,7 @@
       },
       "to": {
         "table": "type_clinical_assertion_record_history",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1543,7 +1543,7 @@
       },
       "to": {
         "table": "type_submitter_review_status_value",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1556,7 +1556,7 @@
       },
       "to": {
         "table": "type_single_interpretation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1569,7 +1569,7 @@
       },
       "to": {
         "table": "custom_assertion_score",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1582,7 +1582,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1595,7 +1595,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1608,7 +1608,7 @@
       },
       "to": {
         "table": "type_assertion_type_attr",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1621,7 +1621,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1634,7 +1634,7 @@
       },
       "to": {
         "table": "observed_in_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1647,7 +1647,7 @@
       },
       "to": {
         "table": "observation_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1660,7 +1660,7 @@
       },
       "to": {
         "table": "type_sample",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1673,7 +1673,7 @@
       },
       "to": {
         "table": "sample_description",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1686,7 +1686,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1699,7 +1699,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1712,7 +1712,7 @@
       },
       "to": {
         "table": "specie",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1725,7 +1725,7 @@
       },
       "to": {
         "table": "age",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1738,7 +1738,7 @@
       },
       "to": {
         "table": "family_info",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1751,7 +1751,7 @@
       },
       "to": {
         "table": "indication_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1764,7 +1764,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1777,7 +1777,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1790,7 +1790,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1803,7 +1803,7 @@
       },
       "to": {
         "table": "clin_asser_trait_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1816,7 +1816,7 @@
       },
       "to": {
         "table": "set_element_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1829,7 +1829,7 @@
       },
       "to": {
         "table": "set_element_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1842,7 +1842,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1855,7 +1855,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1868,7 +1868,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1881,7 +1881,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1894,7 +1894,7 @@
       },
       "to": {
         "table": "method",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1907,7 +1907,7 @@
       },
       "to": {
         "table": "method_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1920,7 +1920,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1933,7 +1933,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1946,7 +1946,7 @@
       },
       "to": {
         "table": "type_software_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1959,7 +1959,7 @@
       },
       "to": {
         "table": "type_method_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1972,7 +1972,7 @@
       },
       "to": {
         "table": "method_attribute",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -1985,7 +1985,7 @@
       },
       "to": {
         "table": "attribute",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -1998,7 +1998,7 @@
       },
       "to": {
         "table": "obs_method_attribute",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2011,7 +2011,7 @@
       },
       "to": {
         "table": "attribute",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2024,7 +2024,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2037,7 +2037,7 @@
       },
       "to": {
         "table": "observed_data",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2050,7 +2050,7 @@
       },
       "to": {
         "table": "attribute",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2063,7 +2063,7 @@
       },
       "to": {
         "table": "type_severity",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2076,7 +2076,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2089,7 +2089,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2102,7 +2102,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2115,7 +2115,7 @@
       },
       "to": {
         "table": "co_occurrence_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2128,7 +2128,7 @@
       },
       "to": {
         "table": "clin_asser_trait_set_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2141,7 +2141,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2154,7 +2154,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2167,7 +2167,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2180,7 +2180,7 @@
       },
       "to": {
         "table": "type_zygosity",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2193,7 +2193,7 @@
       },
       "to": {
         "table": "type_allele_descr",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2206,7 +2206,7 @@
       },
       "to": {
         "table": "type_zygosity",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2219,7 +2219,7 @@
       },
       "to": {
         "table": "clinical_significance_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2232,7 +2232,7 @@
       },
       "to": {
         "table": "type_submitter_review_status_value",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2245,7 +2245,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2258,7 +2258,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2271,7 +2271,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2284,7 +2284,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2297,7 +2297,7 @@
       },
       "to": {
         "table": "type_allele_scv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2310,7 +2310,7 @@
       },
       "to": {
         "table": "gene_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2323,7 +2323,7 @@
       },
       "to": {
         "table": "name",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2336,7 +2336,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2349,7 +2349,7 @@
       },
       "to": {
         "table": "type_location",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2362,7 +2362,7 @@
       },
       "to": {
         "table": "type_names",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2375,7 +2375,7 @@
       },
       "to": {
         "table": "xref_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2388,7 +2388,7 @@
       },
       "to": {
         "table": "citation_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2401,7 +2401,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2414,7 +2414,7 @@
       },
       "to": {
         "table": "molecular_consequence_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2427,7 +2427,7 @@
       },
       "to": {
         "table": "molecular_consequence_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2440,7 +2440,7 @@
       },
       "to": {
         "table": "molecular_consequence",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2453,7 +2453,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2466,7 +2466,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2479,7 +2479,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2492,7 +2492,7 @@
       },
       "to": {
         "table": "type_functional_consequence",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2505,7 +2505,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2518,7 +2518,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2531,7 +2531,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2544,7 +2544,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2557,7 +2557,7 @@
       },
       "to": {
         "table": "type_allele_scv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2570,7 +2570,7 @@
       },
       "to": {
         "table": "type_names",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2583,7 +2583,7 @@
       },
       "to": {
         "table": "type_aggregated_interpretation_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2596,7 +2596,7 @@
       },
       "to": {
         "table": "type_functional_consequence",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2609,7 +2609,7 @@
       },
       "to": {
         "table": "xref_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2622,7 +2622,7 @@
       },
       "to": {
         "table": "citation_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2635,7 +2635,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2648,7 +2648,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2661,7 +2661,7 @@
       },
       "to": {
         "table": "type_geno_type_scv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2674,7 +2674,7 @@
       },
       "to": {
         "table": "type_haplo_type_scv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2687,7 +2687,7 @@
       },
       "to": {
         "table": "type_allele_scv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2700,7 +2700,7 @@
       },
       "to": {
         "table": "type_haplo_type_scv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2713,7 +2713,7 @@
       },
       "to": {
         "table": "type_variation_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2726,7 +2726,7 @@
       },
       "to": {
         "table": "type_functional_consequence",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2739,7 +2739,7 @@
       },
       "to": {
         "table": "type_aggregated_interpretation_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2752,7 +2752,7 @@
       },
       "to": {
         "table": "xref_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2765,7 +2765,7 @@
       },
       "to": {
         "table": "citation_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2778,7 +2778,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2791,7 +2791,7 @@
       },
       "to": {
         "table": "type_attribute_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2804,7 +2804,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2817,7 +2817,7 @@
       },
       "to": {
         "table": "type_comment",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2830,7 +2830,7 @@
       },
       "to": {
         "table": "submission_name_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2843,7 +2843,7 @@
       },
       "to": {
         "table": "trait_mapping_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2856,7 +2856,7 @@
       },
       "to": {
         "table": "trait_mapping",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2869,7 +2869,7 @@
       },
       "to": {
         "table": "med_gen",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2882,7 +2882,7 @@
       },
       "to": {
         "table": "mapping_type",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2895,7 +2895,7 @@
       },
       "to": {
         "table": "deleted_scv_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2908,7 +2908,7 @@
       },
       "to": {
         "table": "type_deleted_scv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2921,7 +2921,7 @@
       },
       "to": {
         "table": "accession",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2934,7 +2934,7 @@
       },
       "to": {
         "table": "general_citations",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2947,7 +2947,7 @@
       },
       "to": {
         "table": "type_citation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2960,7 +2960,7 @@
       },
       "to": {
         "table": "type_xref",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -2973,7 +2973,7 @@
       },
       "to": {
         "table": "included_recorded",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2986,7 +2986,7 @@
       },
       "to": {
         "table": "type_allele",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -2999,7 +2999,7 @@
       },
       "to": {
         "table": "type_included_record_review_status_value",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -3012,7 +3012,7 @@
       },
       "to": {
         "table": "type_aggregated_interpretation_set",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -3025,7 +3025,7 @@
       },
       "to": {
         "table": "submitted_interpretation_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -3038,7 +3038,7 @@
       },
       "to": {
         "table": "type_scv",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -3051,7 +3051,7 @@
       },
       "to": {
         "table": "interpretation_variation_list",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "one"
       }
     },
@@ -3064,7 +3064,7 @@
       },
       "to": {
         "table": "interpretation_variation",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     },
@@ -3077,7 +3077,7 @@
       },
       "to": {
         "table": "general_citations",
-        "column": "uid",
+        "column": "persistent_id",
         "cardinality": "many"
       }
     }
