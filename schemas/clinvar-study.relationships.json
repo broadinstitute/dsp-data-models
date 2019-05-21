@@ -13,8 +13,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "release_type_to_variation_archive_type",
       "from": {
@@ -28,8 +26,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "variation_archive_type_to_type_record_history",
       "from": {
@@ -43,7 +39,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_record_history_to_type_comment",
       "from": {
@@ -57,7 +52,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_comment_to_type_comment_type",
       "from": {
@@ -71,7 +65,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "variation_archive_type_to_replaced_list",
       "from": {
@@ -85,7 +78,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "replaced_list_to_type_record_history",
       "from": {
@@ -99,8 +91,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "variation_archive_type_to_type_comment",
       "from": {
@@ -114,8 +104,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "variation_archive_type_to_species",
       "from": {
@@ -129,8 +117,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "variation_archive_type_to_interpreted_record",
       "from": {
@@ -144,7 +130,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpreted_record_to_type_allele",
       "from": {
@@ -158,8 +143,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_allele_to_gene_list",
       "from": {
@@ -173,8 +156,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "gene_list_to_gene",
       "from": {
@@ -188,8 +169,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "gene_to_type_location",
       "from": {
@@ -203,8 +182,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_location_to_sequence_location",
       "from": {
@@ -218,8 +195,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "sequence_location_to_type_chromosome",
       "from": {
@@ -233,8 +208,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_chromosome_to_type_chromosome_nr",
       "from": {
@@ -248,8 +221,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_chromosome_to_type_chromosome_str",
       "from": {
@@ -263,7 +234,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "gene_to_haploin_sufficiency",
       "from": {
@@ -277,8 +247,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "gene_to_triplo_sensitivity",
       "from": {
@@ -292,8 +260,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_location_to_type_xref",
       "from": {
@@ -307,8 +273,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_xref_to_type_status",
       "from": {
@@ -322,8 +286,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "gene_to_type_gene_variant",
       "from": {
@@ -337,8 +299,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_allele_to_type_location",
       "from": {
@@ -352,8 +312,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_allele_to_type_names",
       "from": {
@@ -367,8 +325,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_allele_to_hgvs_list",
       "from": {
@@ -382,8 +338,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "hgvs_list_to_type_hgvs_expression",
       "from": {
@@ -397,8 +351,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_hgvs_expression_to_type_nucleotide_sequence_expression",
       "from": {
@@ -412,8 +364,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_hgvs_expression_to_type_protein_sequence_expression",
       "from": {
@@ -427,8 +377,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_hgvs_expression_to_type_xref",
       "from": {
@@ -442,8 +390,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_hgvs_expression_to_type_hgvs",
       "from": {
@@ -457,8 +403,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_allele_to_type_aggregated_interpretation_set",
       "from": {
@@ -472,8 +416,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_aggregated_interpretation_set_to_type_aggregated_interpretation",
       "from": {
@@ -487,8 +429,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_aggregated_interpretation_to_type_single_interpretation",
       "from": {
@@ -502,8 +442,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_single_interpretation_to_type_comment",
       "from": {
@@ -517,8 +455,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_single_interpretation_to_type_xref",
       "from": {
@@ -532,8 +468,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_single_interpretation_to_type_citation",
       "from": {
@@ -547,8 +481,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_citation_to_id",
       "from": {
@@ -562,8 +494,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_single_interpretation_to_type_comment",
       "from": {
@@ -577,8 +507,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_single_interpretation_to_type_Interpretation",
       "from": {
@@ -592,8 +520,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_aggregated_interpretation_to_type_description_history",
       "from": {
@@ -607,8 +533,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_aggregated_interpretation_to_condition_list",
       "from": {
@@ -622,8 +546,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "condition_list_to_clin_asser_trait_set_type",
       "from": {
@@ -637,8 +559,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_set_type_to_clin_asser_trait_type",
       "from": {
@@ -652,8 +572,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_type_to_set_element_set_type",
       "from": {
@@ -667,8 +585,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_type_to_set_element_set_type",
       "from": {
@@ -682,8 +598,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "set_element_set_type_to_element_value",
       "from": {
@@ -697,8 +611,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "element_value_to_type_citation",
       "from": {
@@ -712,8 +624,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "element_value_to_type_xref",
       "from": {
@@ -727,8 +637,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "element_value_to_type_comment",
       "from": {
@@ -742,8 +650,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_type_to_type_attribute_set",
       "from": {
@@ -757,8 +663,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "attribute_set_to_attribute",
       "from": {
@@ -772,8 +676,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "attribute_to_type_attribute",
       "from": {
@@ -787,8 +689,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "attribute_set_to_type_citation",
       "from": {
@@ -802,8 +702,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "attribute_set_to_type_xref",
       "from": {
@@ -817,8 +715,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "attribute_set_to_type_comment",
       "from": {
@@ -832,8 +728,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_type_to_trait_relationship",
       "from": {
@@ -847,8 +741,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "trait_relationship_to_set_element_set_type",
       "from": {
@@ -862,8 +754,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "trait_relationship_to_set_element_set_type",
       "from": {
@@ -877,8 +767,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "trait_relationship_to_type_attribute_set",
       "from": {
@@ -892,8 +780,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "trait_relationship_to_type_citation",
       "from": {
@@ -907,8 +793,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "trait_relationship_to_type_xref",
       "from": {
@@ -922,8 +806,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "trait_relationship_to_type_comment",
       "from": {
@@ -937,8 +819,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_set_type_to_set_element_set_type",
       "from": {
@@ -952,8 +832,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_set_type_to_set_element_set_type",
       "from": {
@@ -967,7 +845,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "clin_asser_trait_set_type_to_type_attribute_set",
       "from": {
@@ -981,7 +858,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "clin_asser_trait_set_type_to_type_citation",
       "from": {
@@ -995,8 +871,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_set_type_to_type_xref",
       "from": {
@@ -1010,8 +884,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "clin_asser_trait_set_type_to_type_comment",
       "from": {
@@ -1025,7 +897,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_allele_to_xref_list",
       "from": {
@@ -1039,8 +910,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "xref_list_to_type_xref",
       "from": {
@@ -1054,8 +923,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_allele_to_type_comment",
       "from": {
@@ -1069,8 +936,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_allele_to_type_functional_consequence",
       "from": {
@@ -1084,8 +949,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_functional_consequence_to_type_xref",
       "from": {
@@ -1099,8 +962,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_functional_consequence_to_type_comment",
       "from": {
@@ -1114,8 +975,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_functional_consequence_to_type_citation",
       "from": {
@@ -1129,8 +988,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_allele_to_allele_frequency_list",
       "from": {
@@ -1144,8 +1001,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "allele_frequency_list_to_allele_frequency",
       "from": {
@@ -1159,8 +1014,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_allele_to_global_minor_allele_frequency",
       "from": {
@@ -1174,8 +1027,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "interpreted_record_to_type_haplotype",
       "from": {
@@ -1189,8 +1040,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_haplotype_to_type_allele",
       "from": {
@@ -1204,8 +1053,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_haplotype_to_type_haplotype_variation_type",
       "from": {
@@ -1219,8 +1066,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_haplotype_to_type_names",
       "from": {
@@ -1234,8 +1079,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_haplotype_to_hgvs_list",
       "from": {
@@ -1249,8 +1092,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_haplotype_to_type_aggregated_interpretation_set",
       "from": {
@@ -1264,8 +1105,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_haplotype_to_type_functional_consequence",
       "from": {
@@ -1279,8 +1118,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_haplotype_to_xref_list",
       "from": {
@@ -1294,8 +1131,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_haplotype_to_type_comment",
       "from": {
@@ -1309,7 +1144,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "interpreted_record_to_type_genotype",
       "from": {
@@ -1323,7 +1157,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_genotype_to_type_allele",
       "from": {
@@ -1337,8 +1170,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_genotype_to_type_haplotype",
       "from": {
@@ -1352,8 +1183,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_genotype_to_type_variation_type",
       "from": {
@@ -1367,8 +1196,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_genotype_to_type_names",
       "from": {
@@ -1382,8 +1209,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_genotype_to_hgvs_list",
       "from": {
@@ -1397,8 +1222,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_genotype_to_type_functional_consequence",
       "from": {
@@ -1412,8 +1235,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_genotype_to_type_aggregated_interpretation_set",
       "from": {
@@ -1427,8 +1248,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_genotype_to_xref_list",
       "from": {
@@ -1442,8 +1261,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_genotype_to_citation_list",
       "from": {
@@ -1457,8 +1274,6 @@
         "cardinality": "one"
       }
     },
-
-
     {
       "name": "type_genotype_to_type_attribute_set",
       "from": {
@@ -1472,8 +1287,6 @@
         "cardinality": "many"
       }
     },
-
-
     {
       "name": "type_genotype_to_type_comment",
       "from": {
@@ -1487,7 +1300,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "citation_list_to_type_citation",
       "from": {
@@ -1501,7 +1313,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "interpreted_record_to_type_aggregate_review_status_value",
       "from": {
@@ -1515,7 +1326,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpreted_record_to_rcv_list",
       "from": {
@@ -1529,7 +1339,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "rcv_list_to_type_rcv",
       "from": {
@@ -1543,7 +1352,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_rcv_to_interpreted_condition_list",
       "from": {
@@ -1557,7 +1365,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpreted_condition_list_to_type_rcv_interpreted_condition",
       "from": {
@@ -1571,7 +1378,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_rcv_to_replaced_list",
       "from": {
@@ -1585,7 +1391,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpreted_record_to_type_aggregated_interpretation_set",
       "from": {
@@ -1599,7 +1404,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpreted_record_to_clinical_assertion_list",
       "from": {
@@ -1613,7 +1417,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "clinical_assertion_list_to_measure_trait_type",
       "from": {
@@ -1627,7 +1430,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "measure_trait_type_to_clinvar_submission_id",
       "from": {
@@ -1641,7 +1443,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "measure_trait_type_to_clinvar_accession",
       "from": {
@@ -1655,7 +1456,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "clinvar_accession_to_submitter_identifiers",
       "from": {
@@ -1669,7 +1469,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "measure_trait_type_to_additional_submitters",
       "from": {
@@ -1683,7 +1482,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "additional_submitters_to_submitter_type",
       "from": {
@@ -1697,7 +1495,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "submitter_type_to_submitter_identifiers",
       "from": {
@@ -1711,7 +1508,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "measure_trait_type_to_replaced_list",
       "from": {
@@ -1725,7 +1521,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "replaced_list_to_type_clinical_assertion_record_history",
       "from": {
@@ -1739,7 +1534,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "measure_trait_type_to_review_status",
       "from": {
@@ -1753,7 +1547,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "measure_trait_type_to_type_single_interpretation",
       "from": {
@@ -1767,7 +1560,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "measure_trait_type_to_custom_assertion_score",
       "from": {
@@ -1781,7 +1573,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "custom_assertion_score_to_type_citation",
       "from": {
@@ -1795,7 +1586,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "custom_assertion_score_to_type_xref",
       "from": {
@@ -1809,7 +1599,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "measure_trait_type_to_type_assertion_type_attr",
       "from": {
@@ -1823,7 +1612,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "measure_trait_type_to_type_attribute_set",
       "from": {
@@ -1837,7 +1625,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "measure_trait_type_to_observed_in_list",
       "from": {
@@ -1851,7 +1638,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "observed_in_list_to_observed_in",
       "from": {
@@ -1865,7 +1651,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observation_set_to_type_sample",
       "from": {
@@ -1879,7 +1664,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_sample_to_sample_description",
       "from": {
@@ -1893,7 +1677,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "sample_description_to_type_comment",
       "from": {
@@ -1907,7 +1690,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "sample_description_to_type_citation",
       "from": {
@@ -1921,7 +1703,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_sample_to_species",
       "from": {
@@ -1935,7 +1716,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_sample_to_age",
       "from": {
@@ -1949,7 +1729,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_sample_to_family_info",
       "from": {
@@ -1963,7 +1742,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_sample_to_indication_type",
       "from": {
@@ -1977,7 +1755,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_sample_to_type_citation",
       "from": {
@@ -1991,7 +1768,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_sample_to_type_xref",
       "from": {
@@ -2005,7 +1781,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_sample_to_type_comment",
       "from": {
@@ -2019,7 +1794,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "indication_type_to_clin_asser_trait_type",
       "from": {
@@ -2033,7 +1807,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "indication_type_to_set_element_set_type",
       "from": {
@@ -2047,7 +1820,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "indication_type_to_set_element_set_type",
       "from": {
@@ -2061,7 +1833,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "indication_type_to_type_citation",
       "from": {
@@ -2075,7 +1846,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "indication_type_to_type_xref",
       "from": {
@@ -2089,7 +1859,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "indication_type_to_type_comment",
       "from": {
@@ -2103,7 +1872,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "indication_type_to_type_attribute_set",
       "from": {
@@ -2117,7 +1885,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observation_set_to_method",
       "from": {
@@ -2131,7 +1898,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "method_to_method_type",
       "from": {
@@ -2145,7 +1911,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "method_type_to_type_citation",
       "from": {
@@ -2159,7 +1924,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "method_type_to_type_xref",
       "from": {
@@ -2173,7 +1937,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "method_type_to_type_software_set",
       "from": {
@@ -2187,7 +1950,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "method_type_to_type_method_list",
       "from": {
@@ -2201,7 +1963,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "method_type_to_method_attribute",
       "from": {
@@ -2215,7 +1976,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "method_attribute_to_attribute",
       "from": {
@@ -2229,7 +1989,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "method_type_to_obs_method_attribute",
       "from": {
@@ -2243,7 +2002,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "obs_method_attribute_to_attribute",
       "from": {
@@ -2257,7 +2015,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "obs_method_attribute_to_type_comment",
       "from": {
@@ -2271,7 +2028,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observation_set_to_observed_data",
       "from": {
@@ -2285,7 +2041,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observed_data_to_attribute",
       "from": {
@@ -2299,7 +2054,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "observed_data_to_type_severity",
       "from": {
@@ -2313,7 +2067,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "observed_data_to_type_citation",
       "from": {
@@ -2327,7 +2080,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observed_data_to_type_xref",
       "from": {
@@ -2341,7 +2093,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observed_data_to_type_comment",
       "from": {
@@ -2355,7 +2106,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observation_set_to_co_occurrence_type",
       "from": {
@@ -2369,7 +2119,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observation_set_to_clin_asser_trait_set_type",
       "from": {
@@ -2383,7 +2132,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observation_set_to_type_citation",
       "from": {
@@ -2397,7 +2145,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observation_set_to_type_xref",
       "from": {
@@ -2411,7 +2158,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "observation_set_to_type_comment",
       "from": {
@@ -2425,7 +2171,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "co_occurrence_type_to_type_zygosity",
       "from": {
@@ -2439,7 +2184,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "co_occurrence_type_to_type_allele_descr",
       "from": {
@@ -2453,7 +2197,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_allele_descr_to_type_zygosity",
       "from": {
@@ -2467,7 +2210,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_allele_descr_to_clinical_significance_type",
       "from": {
@@ -2481,7 +2223,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "clinical_significance_type_to_type_submitter_review_status_value",
       "from": {
@@ -2495,7 +2236,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "clinical_significance_type_to_type_comment",
       "from": {
@@ -2509,7 +2249,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "clinical_significance_type_to_type_citation",
       "from": {
@@ -2523,7 +2262,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "clinical_significance_type_to_type_xref",
       "from": {
@@ -2537,7 +2275,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "clinical_significance_type_to_type_comment",
       "from": {
@@ -2551,7 +2288,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "measure_trait_type_to_type_allele_scv",
       "from": {
@@ -2565,7 +2301,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_allele_scv_to_gene_list",
       "from": {
@@ -2579,7 +2314,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_allele_scv_to_name",
       "from": {
@@ -2593,7 +2327,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "gene_list_to_type_xref",
       "from": {
@@ -2607,7 +2340,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_allele_scv_to_type_location",
       "from": {
@@ -2621,7 +2353,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_allele_scv_to_type_names",
       "from": {
@@ -2635,7 +2366,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_allele_scv_to_xref_list",
       "from": {
@@ -2649,7 +2379,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_allele_scv_to_citation_list",
       "from": {
@@ -2663,7 +2392,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_allele_scv_to_type_comment",
       "from": {
@@ -2677,7 +2405,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_allele_scv_to_molecular_consequence_list",
       "from": {
@@ -2691,7 +2418,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_allele_scv_to_molecular_consequence_list",
       "from": {
@@ -2705,7 +2431,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "molecular_consequence_list_to_molecular_consequence",
       "from": {
@@ -2719,7 +2444,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "molecular_consequence_to_type_xref",
       "from": {
@@ -2733,7 +2457,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "molecular_consequence_to_type_citation",
       "from": {
@@ -2747,7 +2470,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "molecular_consequence_to_type_comment",
       "from": {
@@ -2761,7 +2483,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_allele_scv_to_type_functional_consequence",
       "from": {
@@ -2775,7 +2496,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_functional_consequence_to_type_xref",
       "from": {
@@ -2789,7 +2509,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_functional_consequence_to_type_citation",
       "from": {
@@ -2803,7 +2522,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_functional_consequence_to_type_comment",
       "from": {
@@ -2817,7 +2535,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_allele_scv_to_type_attribute_set",
       "from": {
@@ -2831,7 +2548,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_haplo_type_scv_to_type_allele_scv",
       "from": {
@@ -2845,7 +2561,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_haplo_type_scv_to_type_names",
       "from": {
@@ -2859,7 +2574,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_haplo_type_scv_to_type_aggregated_interpretation_set",
       "from": {
@@ -2873,7 +2587,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_haplo_type_scv_to_type_functional_consequence",
       "from": {
@@ -2887,7 +2600,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_haplo_type_scv_to_xref_list",
       "from": {
@@ -2901,7 +2613,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_haplo_type_scv_to_citation_list",
       "from": {
@@ -2915,7 +2626,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_haplo_type_scv_to_type_comment",
       "from": {
@@ -2929,7 +2639,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_haplo_type_scv_to_type_attribute_set",
       "from": {
@@ -2943,7 +2652,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "measure_trait_type_to_type_geno_type_scv",
       "from": {
@@ -2957,7 +2665,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "measure_trait_type_to_type_haplo_type_scv",
       "from": {
@@ -2971,7 +2678,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_type_allele_scv",
       "from": {
@@ -2985,7 +2691,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_type_haplo_type_scv",
       "from": {
@@ -2999,7 +2704,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_type_variation_type",
       "from": {
@@ -3013,7 +2717,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_type_functional_consequence",
       "from": {
@@ -3027,7 +2730,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_type_aggregated_interpretation_set",
       "from": {
@@ -3041,7 +2743,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_xref_list",
       "from": {
@@ -3055,7 +2756,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_citation_list",
       "from": {
@@ -3069,7 +2769,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_type_comment",
       "from": {
@@ -3083,7 +2782,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "type_geno_type_scv_to_type_attribute_set",
       "from": {
@@ -3097,7 +2795,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "measure_trait_type_to_type_citation",
       "from": {
@@ -3111,7 +2808,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "measure_trait_type_to_type_comment",
       "from": {
@@ -3125,7 +2821,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "measure_trait_type_to_submission_name_list",
       "from": {
@@ -3139,7 +2834,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpreted_record_to_trait_mapping_list",
       "from": {
@@ -3153,7 +2847,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "trait_mapping_list_to_trait_mapping",
       "from": {
@@ -3167,7 +2860,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "trait_mapping_to_med_gen",
       "from": {
@@ -3181,7 +2873,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "trait_mapping_to_mapping_type",
       "from": {
@@ -3195,7 +2886,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpreted_record_to_deleted_scv_list",
       "from": {
@@ -3209,7 +2899,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "deleted_scv_list_to_type_deleted_scv",
       "from": {
@@ -3223,7 +2912,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "type_deleted_scv_to_accession",
       "from": {
@@ -3237,7 +2925,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpreted_record_to_general_citations",
       "from": {
@@ -3251,7 +2938,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "general_citations_to_type_citation",
       "from": {
@@ -3265,7 +2951,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "general_citations_to_type_xref",
       "from": {
@@ -3279,7 +2964,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "variation_archive_type_to_included_recorded",
       "from": {
@@ -3293,7 +2977,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "included_record_to_type_allele",
       "from": {
@@ -3307,7 +2990,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "included_record_to_type_included_record_review_status_value",
       "from": {
@@ -3321,7 +3003,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "included_record_to_type_aggregated_interpretation_set",
       "from": {
@@ -3335,7 +3016,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "included_record_to_submitted_interpretation_list",
       "from": {
@@ -3349,7 +3029,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "submitted_interpretation_list_to_type_scv",
       "from": {
@@ -3363,7 +3042,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "included_record_to_interpretation_variation_list",
       "from": {
@@ -3377,7 +3055,6 @@
         "cardinality": "one"
       }
     },
-
     {
       "name": "interpretation_variation_list_to_interpretation_variation",
       "from": {
@@ -3391,7 +3068,6 @@
         "cardinality": "many"
       }
     },
-
     {
       "name": "included_record_to_general_citations",
       "from": {

@@ -15,8 +15,6 @@
           }
         ]
       },
-
-
       {
         "name": "release_type",
         "columns": [
@@ -35,7 +33,6 @@
           }
         ]
       },
-
       {
         "name": "variation_archive_type",
         "columns": [
@@ -119,8 +116,6 @@
           }
         ]
       },
-
-
       {
         "name": "type_record_history",
         "columns": [
@@ -150,8 +145,6 @@
           }
         ]
       },
-
-
       {
         "name": "type_comment",
         "columns": [
@@ -169,8 +162,6 @@
           }
         ]
       },
-
-
       {
         "name": "type_comment_type",
         "columns": [
@@ -196,7 +187,6 @@
           }
         ]
       },
-
       {
         "name": "species",
         "columns": [
@@ -214,7 +204,6 @@
           }
         ]
       },
-
       {
         "name": "interpreted_record",
         "columns": [
@@ -261,7 +250,6 @@
           }
         ]
       },
-
       {
         "name": "type_allele",
         "columns": [
@@ -332,7 +320,6 @@
           }
         ]
       },
-
       {
         "name": "gene_list",
         "columns": [
@@ -340,7 +327,8 @@
             "name": "uid",
             "datatype": "string"
           },
-          {"name": "gene",
+          {
+            "name": "gene",
             "datatype": "string",
             "array_of": true
           },
@@ -350,7 +338,6 @@
           }
         ]
       },
-
       {
         "name": "gene",
         "columns": [
@@ -413,7 +400,6 @@
           }
         ]
       },
-
       {
         "name": "type_location",
         "columns": [
@@ -443,7 +429,6 @@
           }
         ]
       },
-
       {
         "name": "sequence_location",
         "columns": [
@@ -545,7 +530,6 @@
           }
         ]
       },
-
       {
         "name": "type_chromosome",
         "columns": [
@@ -563,7 +547,6 @@
           }
         ]
       },
-
       {
         "name": "type_chromosome_nr",
         "columns": [
@@ -581,7 +564,6 @@
           }
         ]
       },
-
       {
         "name": "type_chromosome_str",
         "columns": [
@@ -602,8 +584,6 @@
           }
         ]
       },
-
-
       {
         "name": "haploin_sufficiency",
         "columns": [
@@ -625,7 +605,6 @@
           }
         ]
       },
-
       {
         "name": "triplo_sensitivity",
         "columns": [
@@ -647,7 +626,6 @@
           }
         ]
       },
-
       {
         "name": "type_xref",
         "columns": [
@@ -677,7 +655,6 @@
           }
         ]
       },
-
       {
         "name": "type_status",
         "columns": [
@@ -702,7 +679,6 @@
           }
         ]
       },
-
       {
         "name": "type_gene_variant",
         "columns": [
@@ -728,7 +704,6 @@
           }
         ]
       },
-
       {
         "name": "type_names",
         "columns": [
@@ -748,7 +723,6 @@
           }
         ]
       },
-
       {
         "name": "hgvs_list",
         "columns": [
@@ -763,7 +737,6 @@
           }
         ]
       },
-
       {
         "name": "type_hgvs_expression",
         "columns": [
@@ -793,7 +766,6 @@
           }
         ]
       },
-
       {
         "name": "type_nucleotide_sequence_expression",
         "columns": [
@@ -806,7 +778,9 @@
             "datatype": "string",
             "array_of": true
           },
-          {"name": "sequence_type"},
+          {
+            "name": "sequence_type"
+          },
           {
             "name": "sequence_accession_version"
           },
@@ -827,7 +801,6 @@
           }
         ]
       },
-
       {
         "name": "type_protein_sequence_expression",
         "columns": [
@@ -840,7 +813,9 @@
             "datatype": "string",
             "array_of": true
           },
-          {"name": "sequence_type"},
+          {
+            "name": "sequence_type"
+          },
           {
             "name": "sequence_accession_version"
           },
@@ -855,7 +830,6 @@
           }
         ]
       },
-
       {
         "name": "type_hgvs",
         "columns": [
@@ -876,7 +850,6 @@
           }
         ]
       },
-
       {
         "name": "type_aggregated_interpretation_set",
         "columns": [
@@ -891,7 +864,6 @@
           }
         ]
       },
-
       {
         "name": "type_aggregated_interpretation",
         "columns": [
@@ -922,7 +894,6 @@
           }
         ]
       },
-
       {
         "name": "type_single_interpretation",
         "columns": [
@@ -970,7 +941,6 @@
           }
         ]
       },
-
       {
         "name": "type_citation",
         "columns": [
@@ -1001,7 +971,6 @@
           }
         ]
       },
-
       {
         "name": "id",
         "columns": [
@@ -1019,7 +988,6 @@
           }
         ]
       },
-
       {
         "name": "type_interpretation",
         "columns": [
@@ -1038,7 +1006,6 @@
           }
         ]
       },
-
       {
         "name": "type_description_history",
         "columns": [
@@ -1057,7 +1024,6 @@
           }
         ]
       },
-
       {
         "name": "condition_list",
         "columns": [
@@ -1072,7 +1038,6 @@
           }
         ]
       },
-
       {
         "name": "clin_asser_trait_set_type",
         "columns": [
@@ -1122,7 +1087,6 @@
           }
         ]
       },
-
       {
         "name": "clin_asser_trait_type",
         "columns": [
@@ -1168,7 +1132,6 @@
           }
         ]
       },
-
       {
         "name": "set_element_set_type",
         "columns": [
@@ -1182,7 +1145,6 @@
           }
         ]
       },
-
       {
         "name": "element_value",
         "columns": [
@@ -1197,7 +1159,6 @@
           {
             "name": "type",
             "datatype": "string"
-
           },
           {
             "name": "citation",
@@ -1216,7 +1177,6 @@
           }
         ]
       },
-
       {
         "name": "type_attribute_set",
         "columns": [
@@ -1245,7 +1205,6 @@
           }
         ]
       },
-
       {
         "name": "attribute",
         "columns": [
@@ -1263,7 +1222,6 @@
           }
         ]
       },
-
       {
         "name": "type_attribute",
         "columns": [
@@ -1285,7 +1243,6 @@
           }
         ]
       },
-
       {
         "name": "trait_relationship",
         "columns": [
@@ -1341,7 +1298,6 @@
           }
         ]
       },
-
       {
         "name": "xref_list",
         "columns": [
@@ -1356,7 +1312,6 @@
           }
         ]
       },
-
       {
         "name": "allele_frequency_list",
         "columns": [
@@ -1371,7 +1326,6 @@
           }
         ]
       },
-
       {
         "name": "allele_frequency",
         "columns": [
@@ -1393,7 +1347,6 @@
           }
         ]
       },
-
       {
         "name": "global_minor_allele_frequency",
         "columns": [
@@ -1419,7 +1372,6 @@
           }
         ]
       },
-
       {
         "name": "type_haplotype",
         "columns": [
@@ -1476,7 +1428,6 @@
           }
         ]
       },
-
       {
         "name": "type_haplotype_variation_type",
         "columns": [
@@ -1495,7 +1446,6 @@
           }
         ]
       },
-
       {
         "name": "type_genotype",
         "columns": [
@@ -1563,7 +1513,6 @@
           }
         ]
       },
-
       {
         "name": "type_variation_type",
         "columns": [
@@ -1582,7 +1531,6 @@
           }
         ]
       },
-
       {
         "name": "citation_list",
         "columns": [
@@ -1597,7 +1545,6 @@
           }
         ]
       },
-
       {
         "name": "type_aggregate_review_status_value",
         "columns": [
@@ -1620,7 +1567,6 @@
           }
         ]
       },
-
       {
         "name": "rcv_list",
         "columns": [
@@ -1643,7 +1589,6 @@
           }
         ]
       },
-
       {
         "name": "replaced_list",
         "columns": [
@@ -1658,7 +1603,6 @@
           }
         ]
       },
-
       {
         "name": "type_rcv",
         "columns": [
@@ -1704,7 +1648,6 @@
           }
         ]
       },
-
       {
         "name": "interpreted_condition_list",
         "columns": [
@@ -1719,7 +1662,6 @@
           }
         ]
       },
-
       {
         "name": "interpreted_condition",
         "columns": [
@@ -1741,7 +1683,6 @@
           }
         ]
       },
-
       {
         "name": "clinical_assertion_list",
         "columns": [
@@ -1756,7 +1697,6 @@
           }
         ]
       },
-
       {
         "name": "measure_trait_type",
         "columns": [
@@ -1884,7 +1824,6 @@
           }
         ]
       },
-
       {
         "name": "clinvar_submission_id",
         "columns": [
@@ -1909,7 +1848,6 @@
           }
         ]
       },
-
       {
         "name": "clinvar_accession",
         "columns": [
@@ -1942,7 +1880,6 @@
           }
         ]
       },
-
       {
         "name": "submitter_identifiers",
         "columns": [
@@ -1968,7 +1905,6 @@
           }
         ]
       },
-
       {
         "name": "additional_submitters",
         "columns": [
@@ -1983,7 +1919,6 @@
           }
         ]
       },
-
       {
         "name": "submitter_type",
         "columns": [
@@ -2006,7 +1941,6 @@
           }
         ]
       },
-
       {
         "name": "type_clinical_assertion_record_history",
         "columns": [
@@ -2032,7 +1966,6 @@
           }
         ]
       },
-
       {
         "name": "type_submitter_review_status_value",
         "columns": [
@@ -2059,7 +1992,6 @@
           }
         ]
       },
-
       {
         "name": "custom_assertion_score",
         "columns": [
@@ -2087,7 +2019,6 @@
           }
         ]
       },
-
       {
         "name": "type_assertion_type_attr",
         "columns": [
@@ -2109,7 +2040,6 @@
           }
         ]
       },
-
       {
         "name": "observed_in_list",
         "columns": [
@@ -2124,7 +2054,6 @@
           }
         ]
       },
-
       {
         "name": "observation_set",
         "columns": [
@@ -2172,7 +2101,6 @@
           }
         ]
       },
-
       {
         "name": "type_sample",
         "columns": [
@@ -2309,7 +2237,6 @@
           }
         ]
       },
-
       {
         "name": "sample_description",
         "columns": [
@@ -2327,7 +2254,6 @@
           }
         ]
       },
-
       {
         "name": "age",
         "columns": [
@@ -2362,7 +2288,6 @@
           }
         ]
       },
-
       {
         "name": "family_info",
         "columns": [
@@ -2396,7 +2321,6 @@
           }
         ]
       },
-
       {
         "name": "indication_type",
         "columns": [
@@ -2451,7 +2375,6 @@
           }
         ]
       },
-
       {
         "name": "method",
         "columns": [
@@ -2479,7 +2402,6 @@
           }
         ]
       },
-
       {
         "name": "method_type",
         "columns": [
@@ -2565,7 +2487,6 @@
           }
         ]
       },
-
       {
         "name": "type_software_set",
         "columns": [
@@ -2587,7 +2508,6 @@
           }
         ]
       },
-
       {
         "name": "type_method_list",
         "columns": [
@@ -2614,7 +2534,6 @@
           }
         ]
       },
-
       {
         "name": "method_attribute",
         "columns": [
@@ -2628,7 +2547,6 @@
           }
         ]
       },
-
       {
         "name": "obs_method_attribute",
         "columns": [
@@ -2647,7 +2565,6 @@
           }
         ]
       },
-
       {
         "name": "observed_data",
         "columns": [
@@ -2680,7 +2597,6 @@
           }
         ]
       },
-
       {
         "name": "type_severity",
         "columns": [
@@ -2699,7 +2615,6 @@
           }
         ]
       },
-
       {
         "name": "co_occurrence_type",
         "columns": [
@@ -2722,7 +2637,6 @@
           }
         ]
       },
-
       {
         "name": "type_zygosity",
         "columns": [
@@ -2743,7 +2657,6 @@
           }
         ]
       },
-
       {
         "name": "type_allele_descr",
         "columns": [
@@ -2774,7 +2687,6 @@
           }
         ]
       },
-
       {
         "name": "clinical_significance_type",
         "columns": [
@@ -2815,7 +2727,6 @@
           }
         ]
       },
-
       {
         "name": "type_allele_scv",
         "columns": [
@@ -2883,7 +2794,6 @@
           }
         ]
       },
-
       {
         "name": "name",
         "columns": [
@@ -2901,7 +2811,6 @@
           }
         ]
       },
-
       {
         "name": "molecular_consequence_list",
         "columns": [
@@ -2916,7 +2825,6 @@
           }
         ]
       },
-
       {
         "name": "molecular_consequence",
         "columns": [
@@ -2957,7 +2865,6 @@
           }
         ]
       },
-
       {
         "name": "type_functional_consequence",
         "columns": [
@@ -2986,7 +2893,6 @@
           }
         ]
       },
-
       {
         "name": "type_haplo_type_scv",
         "columns": [
@@ -3044,7 +2950,6 @@
           }
         ]
       },
-
       {
         "name": "type_geno_type_scv",
         "columns": [
@@ -3103,7 +3008,6 @@
           }
         ]
       },
-
       {
         "name": "submission_name_list",
         "columns": [
@@ -3118,7 +3022,6 @@
           }
         ]
       },
-
       {
         "name": "trait_mapping_list",
         "columns": [
@@ -3133,7 +3036,6 @@
           }
         ]
       },
-
       {
         "name": "trait_mapping",
         "columns": [
@@ -3167,7 +3069,6 @@
           }
         ]
       },
-
       {
         "name": "med_gen",
         "columns": [
@@ -3185,7 +3086,6 @@
           }
         ]
       },
-
       {
         "name": "mapping_type",
         "columns": [
@@ -3203,7 +3103,6 @@
           }
         ]
       },
-
       {
         "name": "deleted_scv_list",
         "columns": [
@@ -3218,7 +3117,6 @@
           }
         ]
       },
-
       {
         "name": "type_deleted_scv",
         "columns": [
@@ -3236,7 +3134,6 @@
           }
         ]
       },
-
       {
         "name": "accession",
         "columns": [
@@ -3258,7 +3155,6 @@
           }
         ]
       },
-
       {
         "name": "general_citations",
         "columns": [
@@ -3278,7 +3174,6 @@
           }
         ]
       },
-
       {
         "name": "included_record",
         "columns": [
@@ -3313,7 +3208,6 @@
           }
         ]
       },
-
       {
         "name": "type_included_record_review_status_value",
         "columns": [
@@ -3330,7 +3224,6 @@
           }
         ]
       },
-
       {
         "name": "submitted_interpretation_list",
         "columns": [
@@ -3345,7 +3238,6 @@
           }
         ]
       },
-
       {
         "name": "type_scv",
         "columns": [
@@ -3367,7 +3259,6 @@
           }
         ]
       },
-
       {
         "name": "interpretation_variation_list",
         "columns": [
@@ -3382,7 +3273,6 @@
           }
         ]
       },
-
       {
         "name": "interpretation_variation",
         "columns": [
