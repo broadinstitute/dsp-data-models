@@ -1,0 +1,3409 @@
+{
+  "name": "ClinVar",
+  "schema": {
+    "tables": [
+      {
+        "name": "clinvar_variation_release",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "clinvar_variation_release",
+            "datatype": "string"
+          }
+        ]
+      },
+
+
+      {
+        "name": "release_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "variation_archive",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "release_date",
+            "datatype": "date"
+          }
+        ]
+      },
+
+      {
+        "name": "variation_archive_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "record_status",
+            "datatype": "string",
+            "element_in": [
+              "current",
+              "previous",
+              "replaced",
+              "deleted"
+            ]
+          },
+          {
+            "name": "replaced_by",
+            "datatype": "string"
+          },
+          {
+            "name": "replaced_list",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "interpreted_record",
+            "datatype": "string"
+          },
+          {
+            "name": "included_record",
+            "datatype": "string"
+          },
+          {
+            "name": "variation_id",
+            "datatype": "integer"
+          },
+          {
+            "name": "variation_name",
+            "datatype": "string"
+          },
+          {
+            "name": "variation_type",
+            "datatype": "string"
+          },
+          {
+            "name": "date_created",
+            "datatype": "date"
+          },
+          {
+            "name": "date_last_updated",
+            "datatype": "date"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "integer"
+          },
+          {
+            "name": "number_of_submitters",
+            "datatype": "integer"
+          },
+          {
+            "name": "number_of_submissions",
+            "datatype": "integer"
+          },
+          {
+            "name": "record_type",
+            "datatype": "string"
+          }
+        ]
+      },
+
+
+      {
+        "name": "type_record_history",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "integer"
+          },
+          {
+            "name": "date_changed",
+            "datatype": "date"
+          },
+          {
+            "name": "variation_id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+
+      {
+        "name": "type_comment",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "data_source",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+          }
+        ]
+      },
+
+
+      {
+        "name": "type_comment_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "element_in": [
+              "public",
+              "ConvertedByNCBI",
+              "MissingFromAssembly",
+              "GenomicLocationNotEstablished",
+              "LocationOnGenomeAndProductNotAligned",
+              "DeletionComment",
+              "MergeComment",
+              "AssemblySpecificAlleleDefinition",
+              "AlignmentGapMakesAppearInconsistent",
+              "ExplanationOfInterpretation"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "species",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "taxonomy_id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "interpreted_record",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "simple_allele",
+            "datatype": "string"
+          },
+          {
+            "name": "haplotype",
+            "datatype": "string"
+          },
+          {
+            "name": "geno_type",
+            "datatype": "string"
+          },
+          {
+            "name": "review_status",
+            "datatype": "string"
+          },
+          {
+            "name": "rcv_list",
+            "datatype": "string"
+          },
+          {
+            "name": "clinical_assertion_list",
+            "datatype": "string"
+          },
+          {
+            "name": "trait_mapping_list",
+            "datatype": "string"
+          },
+          {
+            "name": "deleted_scv_list",
+            "datatype": "string"
+          },
+          {
+            "name": "general_citations",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_allele",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "gene_list",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "variant_type",
+            "datatype": "string"
+          },
+          {
+            "name": "location",
+            "datatype": "string"
+          },
+          {
+            "name": "other_name_list",
+            "datatype": "string"
+          },
+          {
+            "name": "protein_change",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "hgvs_list",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretations",
+            "datatype": "string"
+          },
+          {
+            "name": "xref_list",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string"
+          },
+          {
+            "name": "functional_consequence",
+            "datatype": "string"
+          },
+          {
+            "name": "allele_frequency_list",
+            "datatype": "string"
+          },
+          {
+            "name": "global_minor_allele_frequency",
+            "datatype": "string"
+          },
+          {
+            "name": "allele_id",
+            "datatype": "integer"
+          },
+          {
+            "name": "variation_id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "gene_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {"name": "gene",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "gene_count",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "gene",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "location",
+            "datatype": "string"
+          },
+          {
+            "name": "omim",
+            "datatype": "integer",
+            "array_of": true
+          },
+          {
+            "name": "haploin_sufficiency",
+            "datatype": "string"
+          },
+          {
+            "name": "triplo_sensitivity",
+            "datatype": "string"
+          },
+          {
+            "name": "symbol"
+          },
+          {
+            "name": "full_name",
+            "datatype": "string"
+          },
+          {
+            "name": "gene_id",
+            "datatype": "integer"
+          },
+          {
+            "name": "hgnc_id",
+            "datatype": "string"
+          },
+          {
+            "name": "source",
+            "datatype": "string"
+          },
+          {
+            "name": "relationship_type",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "property",
+            "datatype": "string"
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_location",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "cytogenetic_location",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "sequence_location",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "gene_location",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "sequence_location",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "for_display",
+            "datatype": "boolean"
+          },
+          {
+            "name": "asssembly",
+            "datatype": "string"
+          },
+          {
+            "name": "chr",
+            "datatype": "string"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "outer_start",
+            "datatype": "integer"
+          },
+          {
+            "name": "inner_start",
+            "datatype": "integer"
+          },
+          {
+            "name": "start",
+            "datatype": "integer"
+          },
+          {
+            "name": "stop",
+            "datatype": "integer"
+          },
+          {
+            "name": "inner_stop",
+            "datatype": "integer"
+          },
+          {
+            "name": "outer_stop",
+            "datatype": "integer"
+          },
+          {
+            "name": "display_start",
+            "datatype": "integer"
+          },
+          {
+            "name": "display_stop",
+            "datatype": "integer"
+          },
+          {
+            "name": "strand",
+            "datatype": "string"
+          },
+          {
+            "name": "variant_length",
+            "datatype": "integer"
+          },
+          {
+            "name": "reference_allele",
+            "datatype": "string"
+          },
+          {
+            "name": "alternate_allele",
+            "datatype": "string"
+          },
+          {
+            "name": "assembly_acession_version",
+            "datatype": "string"
+          },
+          {
+            "name": "assembly_status",
+            "datatype": "string",
+            "element_in": [
+              "current",
+              "previous"
+            ]
+          },
+          {
+            "name": "position_vcf",
+            "datatype": "integer"
+          },
+          {
+            "name": "reference_allele_vcf",
+            "datatype": "string"
+          },
+          {
+            "name": "alternate_allele_vcf",
+            "datatype": "string"
+          },
+          {
+            "name": "for_display_length",
+            "datatype": "boolean"
+          }
+        ]
+      },
+
+      {
+        "name": "type_chromosome",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "type_chromosome_nr",
+            "datatype": "string"
+          },
+          {
+            "name": "type_chromosome_str",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_chromosome_nr",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "chromosome",
+            "datatype": "string",
+            "element_in": [
+              "1",
+              "22"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "type_chromosome_str",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "chromosome",
+            "datatype": "string",
+            "element_in": [
+              "X",
+              "Y",
+              "MT",
+              "PAR",
+              "Un"
+            ]
+          }
+        ]
+      },
+
+
+      {
+        "name": "haploin_sufficiency",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "haploin_sufficiency",
+            "datatype": "string"
+          },
+          {
+            "name": "last_evaluated",
+            "datatype": "date"
+          },
+          {
+            "name": "clingen",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "triplo_sensitivity",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "triplo_sensitivity",
+            "datatype": "string"
+          },
+          {
+            "name": "last_evaluated",
+            "datatype": "date"
+          },
+          {
+            "name": "clingen",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_xref",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "db",
+            "datatype": "string"
+          },
+          {
+            "name": "id",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+          },
+          {
+            "name": "url",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_status",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "status",
+            "datatype": "string",
+            "element_in": [
+              "current",
+              "completed and retired",
+              "delete",
+              "in development",
+              "reclassified",
+              "reject",
+              "secondary",
+              "suppressed",
+              "under review"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "type_gene_variant",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "gene_variant",
+            "datatype": "string",
+            "element_in": [
+              "variant within gene",
+              "gene overlapped by variant",
+              "variant near gene, upstream",
+              "variant near gene, downstream",
+              "asserted, but not computed",
+              "within multiple genes by overlap",
+              "within single gene",
+              "genes overlapped by variant",
+              "near gene, downstream",
+              "near gene, upstream"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "type_names",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "names",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "hgvs_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "hgvs",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_hgvs_expression",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "nucleotide_expression",
+            "datatype": "string"
+          },
+          {
+            "name": "protein_expression",
+            "datatype": "string"
+          },
+          {
+            "name": "molecular_consequence",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+          },
+          {
+            "name": "assembly"
+          }
+        ]
+      },
+
+      {
+        "name": "type_nucleotide_sequence_expression",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "expression",
+            "datatype": "string",
+            "array_of": true
+          },
+          {"name": "sequence_type"},
+          {
+            "name": "sequence_accession_version"
+          },
+          {
+            "name": "sequence_accession"
+          },
+          {
+            "name": "sequence_version"
+          },
+          {
+            "name": "change"
+          },
+          {
+            "name": "assembly"
+          },
+          {
+            "name": "submitted"
+          }
+        ]
+      },
+
+      {
+        "name": "type_protein_sequence_expression",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "expression",
+            "datatype": "string",
+            "array_of": true
+          },
+          {"name": "sequence_type"},
+          {
+            "name": "sequence_accession_version"
+          },
+          {
+            "name": "sequence_accession"
+          },
+          {
+            "name": "sequence_version"
+          },
+          {
+            "name": "change"
+          }
+        ]
+      },
+
+      {
+        "name": "type_hgvs",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "hgvs",
+            "datatype": "string",
+            "element_in": [
+              "coding",
+              "genomic",
+              "genomic, top-level",
+              "non-coding",
+              "protein"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "type_aggregated_interpretation_set",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretation",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_aggregated_interpretation",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "type_single_interpretation",
+            "datatype": "string"
+          },
+          {
+            "name": "description_history",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "condition_list",
+            "datatype": "string"
+          },
+          {
+            "name": "number_of_submitters",
+            "datatype": "integer"
+          },
+          {
+            "name": "number_of_submissions",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "type_single_interpretation",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "description",
+            "datatype": "string"
+          },
+          {
+            "name": "explanation",
+            "datatype": "string"
+          },
+          {
+            "name": "explanation_of_interpretation",
+            "datatype": "string"
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "citation",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "date_last_evaluated",
+            "datatype": "date"
+          },
+          {
+            "name": "allele_origin",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_citation",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "id",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "url",
+            "datatype": "string"
+          },
+          {
+            "name": "citation_text",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+          },
+          {
+            "name": "abbrev",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "id",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "id",
+            "datatype": "string"
+          },
+          {
+            "name": "source",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_interpretation",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretation",
+            "datatype": "string",
+            "element_in": [
+              "Clinical significance",
+              "Functional status",
+              "Association"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "type_description_history",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "description",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "dated",
+            "datatype": "date"
+          }
+        ]
+      },
+
+      {
+        "name": "condition_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "trait_set",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "clin_asser_trait_set_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "trait",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "name",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "symbol",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "element_in": [
+              "Disease",
+              "DrugResponse",
+              "BloodGroup",
+              "Finding",
+              "PhenotypeInstruction",
+              "TraitChoice"
+            ]
+          },
+          {
+            "name": "date_last_evaluated",
+            "datatype": "date"
+          },
+          {
+            "name": "id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "clin_asser_trait_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "symbol",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "trait_relationship",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "element_in": [
+              "Disease",
+              "DrugResponse",
+              "BloodGroup",
+              "Finding",
+              "NamedProteinVariant",
+              "PhenotypeInstruction"
+            ]
+          },
+          {
+            "name": "id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "set_element_set_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "element_value",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "element_value",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "element_value",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_attribute_set",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "attribute",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "attribute",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "type_attribute",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_attribute",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "attribute",
+            "datatype": "string"
+          },
+          {
+            "name": "integer_value",
+            "datatype": "integer"
+          },
+          {
+            "name": "date_value",
+            "datatype": "date"
+          }
+        ]
+      },
+
+      {
+        "name": "trait_relationship",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "symbol",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "element_in": [
+              "phenocopy",
+              "Subphenotype",
+              "DrugResponseAndDisease",
+              "co-occurring condition",
+              "Finding member"
+            ]
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "source",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "xref_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "allele_frequency_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "allele_frequency",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "allele_frequency",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "value",
+            "datatype": "double"
+          },
+          {
+            "name": "source",
+            "datatype": "string"
+          },
+          {
+            "name": "url",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "global_minor_allele_frequency",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "value",
+            "datatype": "double"
+          },
+          {
+            "name": "source",
+            "datatype": "string"
+          },
+          {
+            "name": "minor_allele",
+            "datatype": "string"
+          },
+          {
+            "name": "url",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_haplotype",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "simple_allele",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "variation_type",
+            "datatype": "string"
+          },
+          {
+            "name": "other_name_list",
+            "datatype": "string"
+          },
+          {
+            "name": "hgvs_list",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretations",
+            "datatype": "string"
+          },
+          {
+            "name": "functional_consequence",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref_list",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "variation_id",
+            "datatype": "integer"
+          },
+          {
+            "name": "humber_of_copies",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "type_haplotype_variation_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "haplotype_variation_type",
+            "datatype": "string",
+            "element_in": [
+              "Haplotype",
+              "Variation",
+              "Phase unknown"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "type_genotype",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "simple_allele",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "haplotype",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "variation_type",
+            "datatype": "string"
+          },
+          {
+            "name": "other_name_list",
+            "datatype": "string"
+          },
+          {
+            "name": "hgvs_list",
+            "datatype": "string"
+          },
+          {
+            "name": "functional_consequence",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "interpretations",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref_list",
+            "datatype": "string"
+          },
+          {
+            "name": "citation_list",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "variation_id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "type_variation_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "haplotype_variation_type",
+            "datatype": "string",
+            "element_in": [
+              "Diplotype",
+              "CompoundHeterozygote",
+              "Distinct chromosomes"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "citation_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_aggregate_review_status_value",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "aggregate_review_status_value",
+            "datatype": "string",
+            "element_in": [
+              "no assertion provided",
+              "no assertion criteria provided",
+              "criteria provided, single submitter",
+              "criteria provided, multiple submitters, no conflicts",
+              "criteria provided, conflicting interpretations",
+              "reviewed by expert panel",
+              "practice guideline"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "rcv_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "rcv_accession",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "submission_count",
+            "datatype": "integer"
+          },
+          {
+            "name": "independent_observations",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "replaced_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "replaced",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_rcv",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "interpreted_condition_list",
+            "datatype": "string"
+          },
+          {
+            "name": "replaced_list",
+            "datatype": "string"
+          },
+          {
+            "name": "title",
+            "datatype": "string"
+          },
+          {
+            "name": "date_last_evaluated",
+            "datatype": "date"
+          },
+          {
+            "name": "interpretation",
+            "datatype": "string"
+          },
+          {
+            "name": "submission_count",
+            "datatype": "integer"
+          },
+          {
+            "name": "review_status",
+            "datatype": "string"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "interpreted_condition_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "interpreted_condition",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "interpreted_condition",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "rcv_interpreted_condition",
+            "datatype": "string"
+          },
+          {
+            "name": "db",
+            "datatype": "string"
+          },
+          {
+            "name": "id",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "clinical_assertion_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "clinical_assertion",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "measure_trait_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "clinvar_submission_id",
+            "datatype": "string"
+          },
+          {
+            "name": "clinvar_accession",
+            "datatype": "string"
+          },
+          {
+            "name": "additional_submitters",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "record_status",
+            "datatype": "string",
+            "element_in": [
+              "current",
+              "replaced",
+              "removed"
+            ]
+          },
+          {
+            "name": "replaces",
+            "datatype": "string"
+          },
+          {
+            "name": "replaced_list",
+            "datatype": "string"
+          },
+          {
+            "name": "review_status",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretation",
+            "datatype": "string"
+          },
+          {
+            "name": "custom_assertion_score",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "assertion",
+            "datatype": "string"
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "observed_in_list",
+            "datatype": "string"
+          },
+          {
+            "name": "simple_allele",
+            "datatype": "string"
+          },
+          {
+            "name": "haplo_type",
+            "datatype": "string"
+          },
+          {
+            "name": "haplo_type",
+            "datatype": "string"
+          },
+          {
+            "name": "geno_type",
+            "datatype": "string"
+          },
+          {
+            "name": "trait_set",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "study_name",
+            "datatype": "string"
+          },
+          {
+            "name": "study_description",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "submission_name_list",
+            "datatype": "string"
+          },
+          {
+            "name": "date_created",
+            "datatype": "date"
+          },
+          {
+            "name": "date_last_updated",
+            "datatype": "date"
+          },
+          {
+            "name": "submission_date",
+            "datatype": "date"
+          },
+          {
+            "name": "id",
+            "datatype": "integer"
+          },
+          {
+            "name": "fda_recognized_database",
+            "datatype": "boolean"
+          }
+        ]
+      },
+
+      {
+        "name": "clinvar_submission_id",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "local_key",
+            "datatype": "string"
+          },
+          {
+            "name": "title",
+            "datatype": "string"
+          },
+          {
+            "name": "local_key_is_submitted"
+          },
+          {
+            "name": "submitted_assembly",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "clinvar_accession",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "integer"
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "element_in": [
+              "SCV"
+            ]
+          },
+          {
+            "name": "submitter_identifiers",
+            "datatype": "string"
+          },
+          {
+            "name": "date_updated",
+            "datatype": "date"
+          }
+        ]
+      },
+
+      {
+        "name": "submitter_identifiers",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "submitter_name",
+            "datatype": "string"
+          },
+          {
+            "name": "org_id",
+            "datatype": "integer"
+          },
+          {
+            "name": "organization_category",
+            "datatype": "integer"
+          },
+          {
+            "name": "org_abbreviation",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "additional_submitters",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "submitter_description",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "submitter_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "submitter_identifiers",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "element_in": [
+              "primary",
+              "secondary",
+              "behalf"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "type_clinical_assertion_record_history",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "integer"
+          },
+          {
+            "name": "date_changed",
+            "datatype": "date"
+          }
+        ]
+      },
+
+      {
+        "name": "type_submitter_review_status_value",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "type_submitter_review_status_value",
+            "datatype": "string",
+            "element_in": [
+              "no assertion provided",
+              "no assertion criteria provided",
+              "criteria provided, single submitter",
+              "reviewed by expert panel",
+              "practice guideline",
+              "criteria provided, multiple submitters, no conflicts",
+              "criteria provided, conflicting interpretations",
+              "classified by single submitter",
+              "reviewed by professional society",
+              "not classified by submitter",
+              "classified by multiple submitters"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "custom_assertion_score",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+          },
+          {
+            "name": "value",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_assertion_type_attr",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "type_assertion_type_attr",
+            "datatype": "string",
+            "element_in": [
+              "variation to disease",
+              "variation to included disease",
+              "variation in modifier gene to disease",
+              "confers sensitivity",
+              "confers resistance",
+              "variant to named protein"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "observed_in_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "observed_in",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "observation_set",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "sanple",
+            "datatype": "string"
+          },
+          {
+            "name": "method",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "observed_data",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "co_occurrence_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "trait_set",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_sample",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "sample_description",
+            "datatype": "string"
+          },
+          {
+            "name": "origin",
+            "datatype": "string",
+            "element_in": [
+              "germline",
+              "somatic",
+              "de novo",
+              "unknown",
+              "not provided",
+              "inherited",
+              "maternal",
+              "paternal",
+              "uniparental",
+              "biparental",
+              "not-reported",
+              "tested-inconclusive",
+              "not applicable",
+              "experimentally generated"
+            ]
+          },
+          {
+            "name": "ethnicity",
+            "datatype": "string"
+          },
+          {
+            "name": "geographic_origin",
+            "datatype": "string"
+          },
+          {
+            "name": "tissue",
+            "datatype": "string"
+          },
+          {
+            "name": "cell_line",
+            "datatype": "string"
+          },
+          {
+            "name": "species",
+            "datatype": "string"
+          },
+          {
+            "name": "age",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "strain",
+            "datatype": "string"
+          },
+          {
+            "name": "affected_status",
+            "datatype": "string",
+            "element_in": [
+              "yes",
+              "no",
+              "not provided",
+              "unknown",
+              "not applicable"
+            ]
+          },
+          {
+            "name": "number_tested",
+            "datatype": "integer"
+          },
+          {
+            "name": "number_males",
+            "datatype": "integer"
+          },
+          {
+            "name": "number_females",
+            "datatype": "integer"
+          },
+          {
+            "name": "number_chr_tested",
+            "datatype": "integer"
+          },
+          {
+            "name": "gender",
+            "datatype": "string",
+            "element_in": [
+              "male",
+              "female",
+              "mixed"
+            ]
+          },
+          {
+            "name": "family_data",
+            "datatype": "string"
+          },
+          {
+            "name": "proband",
+            "datatype": "string"
+          },
+          {
+            "name": "indication",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "source_type",
+            "datatype": "string",
+            "element_in": [
+              "submitter-generated",
+              "data mining"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "sample_description",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "description",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "age",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "age",
+            "datatype": "integer"
+          },
+          {
+            "name": "age_unit",
+            "datatype": "string",
+            "element_in": [
+              "days",
+              "weeks",
+              "months",
+              "years",
+              "weeks gestation",
+              "months gestation"
+            ]
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "element_in": [
+              "minimum",
+              "maximum",
+              "single"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "family_info",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "family_history",
+            "datatype": "string"
+          },
+          {
+            "name": "num_families",
+            "datatype": "integer"
+          },
+          {
+            "name": "num_families_with_variant",
+            "datatype": "integer"
+          },
+          {
+            "name": "num_families_with_segregation_observed",
+            "datatype": "integer"
+          },
+          {
+            "name": "pedigree_id",
+            "datatype": "string"
+          },
+          {
+            "name": "segregation_observed",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "indication_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "trait",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "name",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "symbol",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "element_in": [
+              "indication"
+            ]
+          },
+          {
+            "name": "id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "method",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "method_type",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string",
+            "element_in": [
+              "literature only",
+              "reference population",
+              "case-control",
+              "clinical testing",
+              "in vitro",
+              "in vivo",
+              "inferred from source",
+              "research"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "method_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "name_platform",
+            "datatype": "string"
+          },
+          {
+            "name": "type_platform",
+            "datatype": "string"
+          },
+          {
+            "name": "purpose",
+            "datatype": "string"
+          },
+          {
+            "name": "result_type",
+            "datatype": "string",
+            "element_in": [
+              "number of occurrences",
+              "p value",
+              "odds ratio",
+              "variant call"
+            ]
+          },
+          {
+            "name": "min_reported",
+            "datatype": "string"
+          },
+          {
+            "name": "max_reported",
+            "datatype": "string"
+          },
+          {
+            "name": "reference_standard",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "description",
+            "datatype": "string"
+          },
+          {
+            "name": "software",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "source_type",
+            "datatype": "string",
+            "element_in": [
+              "submitter-generated",
+              "data mining",
+              "data review"
+            ]
+          },
+          {
+            "name": "method_type",
+            "datatype": "string"
+          },
+          {
+            "name": "method_attribute",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "obs_method_attribute",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_software_set",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "string"
+          },
+          {
+            "name": "purpose",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_method_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "method_list",
+            "datatype": "string",
+            "element_in": [
+              "literature only",
+              "reference population",
+              "case-control",
+              "clinical testing",
+              "in vitro",
+              "in vivo",
+              "research",
+              "curation",
+              "not provided",
+              "provider interpretation",
+              "phenotyping only"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "method_attribute",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "attribute",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "obs_method_attribute",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "attribute",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "observed_data",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "attribute",
+            "datatype": "string"
+          },
+          {
+            "name": "severity",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_severity",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "severity",
+            "datatype": "string",
+            "element_in": [
+              "mild",
+              "moderate",
+              "severe"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "co_occurrence_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "zygosity",
+            "datatype": "string"
+          },
+          {
+            "name": "allele_desc_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "count",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "type_zygosity",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "zygosity",
+            "datatype": "string",
+            "element_in": [
+              "Homozygote",
+              "SingleHeterozygote",
+              "CompoundHeterozygote",
+              "Hemizygote",
+              "not provided"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "type_allele_descr",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "relative_orientation",
+            "datatype": "string",
+            "element_in": [
+              "cis",
+              "trans",
+              "unknown"
+            ]
+          },
+          {
+            "name": "zygosity",
+            "datatype": "string"
+          },
+          {
+            "name": "clinical_significance",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "clinical_significance_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "review_status",
+            "datatype": "string"
+          },
+          {
+            "name": "description",
+            "datatype": "string"
+          },
+          {
+            "name": "explanation",
+            "datatype": "string"
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "date_last_evaluated",
+            "datatype": "date"
+          }
+        ]
+      },
+
+      {
+        "name": "type_allele_scv",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "gene_list",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "variant_type",
+            "datatype": "string"
+          },
+          {
+            "name": "location",
+            "datatype": "string"
+          },
+          {
+            "name": "other_name_lists",
+            "datatype": "string"
+          },
+          {
+            "name": "protien_change",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref_list",
+            "datatype": "string"
+          },
+          {
+            "name": "citation_list",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "molecular_consequence_list",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "functional_consequence",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "allele_id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "name",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "type",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "molecular_consequence_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "molecular_consequence",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "molecular_consequence",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "RS",
+            "datatype": "integer"
+          },
+          {
+            "name": "hgvs",
+            "datatype": "string"
+          },
+          {
+            "name": "so_id",
+            "datatype": "string"
+          },
+          {
+            "name": "function",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_functional_consequence",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "value",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "type_haplo_type_scv",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "simple_allele",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "other_name_list",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretations",
+            "datatype": "string"
+          },
+          {
+            "name": "functional_consequence",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref_list",
+            "datatype": "string"
+          },
+          {
+            "name": "citation_list",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "variaiton_id",
+            "datatype": "integer"
+          },
+          {
+            "name": "number_of_copies",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "type_geno_type_scv",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "simple_allele",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "haplo_type",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "variation_type",
+            "datatype": "string"
+          },
+          {
+            "name": "functional_consequence",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "interpretations",
+            "datatype": "string"
+          },
+          {
+            "name": "xref_list",
+            "datatype": "string"
+          },
+          {
+            "name": "citation_list",
+            "datatype": "string"
+          },
+          {
+            "name": "comment",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "attribute_set",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "variaiton_id",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "submission_name_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "submission_name",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "trait_mapping_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "trait_mapping",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "trait_mapping",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "med_gen",
+            "datatype": "string"
+          },
+          {
+            "name": "clinical_assertion_id",
+            "datatype": "integer"
+          },
+          {
+            "name": "trait_type",
+            "datatype": "string"
+          },
+          {
+            "name": "mapping_type",
+            "datatype": "string"
+          },
+          {
+            "name": "mapping_value",
+            "datatype": "string"
+          },
+          {
+            "name": "mapping_ref",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "med_gen",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "cui",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "mapping_type",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "name",
+            "datatype": "string"
+          },
+          {
+            "name": "xref",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "deleted_scv_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "scv",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_deleted_scv",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "description",
+            "datatype": "string"
+          }
+        ]
+      },
+
+      {
+        "name": "accession",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "integer"
+          },
+          {
+            "name": "date_deleted",
+            "datatype": "date"
+          }
+        ]
+      },
+
+      {
+        "name": "general_citations",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "citation",
+            "datatype": "string",
+            "array_of": true
+          },
+          {
+            "name": "xref",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "included_record",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "simple_allele",
+            "datatype": "string"
+          },
+          {
+            "name": "review_status",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretations",
+            "datatype": "string"
+          },
+          {
+            "name": "submitted_interpretation_list",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretation_variation_list",
+            "datatype": "string"
+          },
+          {
+            "name": "general_citations",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_included_record_review_status_value",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "included_record_review_status_value",
+            "datatype": "string",
+            "element_in": [
+              "no interpretation for the single variant"
+            ]
+          }
+        ]
+      },
+
+      {
+        "name": "submitted_interpretation_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "scv",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "type_scv",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "title",
+            "datatype": "string"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "integer"
+          }
+        ]
+      },
+
+      {
+        "name": "interpretation_variation_list",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "interpretation_variation",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
+
+      {
+        "name": "interpretation_variation",
+        "columns": [
+          {
+            "name": "uid",
+            "datatype": "string"
+          },
+          {
+            "name": "variation_id",
+            "datatype": "integer"
+          },
+          {
+            "name": "accession",
+            "datatype": "string"
+          },
+          {
+            "name": "version",
+            "datatype": "integer"
+          }
+        ]
+      }
+    ]
+  }
+}

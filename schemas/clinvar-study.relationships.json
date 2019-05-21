@@ -1,0 +1,3409 @@
+{
+  "relationships": [
+    {
+      "name": "clinvar_variation_releases_to_release_type",
+      "from": {
+        "table": "clinvar_variation_releases",
+        "column": "clinvar_variation_release",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "release_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "release_type_to_variation_archive_type",
+      "from": {
+        "table": "release_type",
+        "column": "variation_archive",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "variation_archive_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "variation_archive_type_to_type_record_history",
+      "from": {
+        "table": "variation_archive_type",
+        "column": "replaced_by",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_record_history",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_record_history_to_type_comment",
+      "from": {
+        "table": "type_record_history",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_comment_to_type_comment_type",
+      "from": {
+        "table": "type_comment",
+        "column": "type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "variation_archive_type_to_replaced_list",
+      "from": {
+        "table": "variation_archive_type",
+        "column": "replaced_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "replaced_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "replaced_list_to_type_record_history",
+      "from": {
+        "table": "replaced_list",
+        "column": "replaced",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_record_history",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "variation_archive_type_to_type_comment",
+      "from": {
+        "table": "variation_archive_type",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "variation_archive_type_to_species",
+      "from": {
+        "table": "variation_archive_type",
+        "column": "species",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "species",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "variation_archive_type_to_interpreted_record",
+      "from": {
+        "table": "variation_archive_type",
+        "column": "interpreted_record",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "interpreted_record",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_type_allele",
+      "from": {
+        "table": "interpreted_record",
+        "column": "simple_allele",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_allele",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_gene_list",
+      "from": {
+        "table": "type_allele",
+        "column": "gene_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "gene_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "gene_list_to_gene",
+      "from": {
+        "table": "gene_list",
+        "column": "gene",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "gene",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "gene_to_type_location",
+      "from": {
+        "table": "gene",
+        "column": "location",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_location",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_location_to_sequence_location",
+      "from": {
+        "table": "type_location",
+        "column": "sequence_location",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "sequence_location",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "sequence_location_to_type_chromosome",
+      "from": {
+        "table": "sequence_location",
+        "column": "chr",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_chromosome",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_chromosome_to_type_chromosome_nr",
+      "from": {
+        "table": "type_chromosome",
+        "column": "type_chromosome_nr",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_chromosome_nr",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_chromosome_to_type_chromosome_str",
+      "from": {
+        "table": "type_chromosome",
+        "column": "type_chromosome_str",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_chromosome_str",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "gene_to_haploin_sufficiency",
+      "from": {
+        "table": "gene",
+        "column": "haploin_sufficiency",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "haploin_sufficiency",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "gene_to_triplo_sensitivity",
+      "from": {
+        "table": "gene",
+        "column": "triplo_sensitivity",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "triplo_sensitivity",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_location_to_type_xref",
+      "from": {
+        "table": "type_location",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_xref_to_type_status",
+      "from": {
+        "table": "type_xref",
+        "column": "status",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_status",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "gene_to_type_gene_variant",
+      "from": {
+        "table": "gene",
+        "column": "relationship_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_gene_variant",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_type_location",
+      "from": {
+        "table": "type_allele",
+        "column": "location",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_location",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_type_names",
+      "from": {
+        "table": "type_allele",
+        "column": "other_name_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_names",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_hgvs_list",
+      "from": {
+        "table": "type_allele",
+        "column": "hgvs_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "hgvs_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "hgvs_list_to_type_hgvs_expression",
+      "from": {
+        "table": "hgvs_list",
+        "column": "hgvs",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_hgvs_expression",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_hgvs_expression_to_type_nucleotide_sequence_expression",
+      "from": {
+        "table": "type_hgvs_expression",
+        "column": "nucleotide_expression",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_nucleotide_sequence_expression",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_hgvs_expression_to_type_protein_sequence_expression",
+      "from": {
+        "table": "type_hgvs_expression",
+        "column": "protein_expression",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_protein_sequence_expression",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_hgvs_expression_to_type_xref",
+      "from": {
+        "table": "type_hgvs_expression",
+        "column": "molecular_consequence",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_hgvs_expression_to_type_hgvs",
+      "from": {
+        "table": "type_hgvs_expression",
+        "column": "type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_hgvs",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_type_aggregated_interpretation_set",
+      "from": {
+        "table": "type_allele",
+        "column": "interpretation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregated_interpretation_set",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_aggregated_interpretation_set_to_type_aggregated_interpretation",
+      "from": {
+        "table": "type_aggregated_interpretation_set",
+        "column": "interpretation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregated_interpretation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_aggregated_interpretation_to_type_single_interpretation",
+      "from": {
+        "table": "type_aggregated_interpretation",
+        "column": "type_single_interpretation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_single_interpretation",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_single_interpretation_to_type_comment",
+      "from": {
+        "table": "type_single_interpretation",
+        "column": "explanation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_single_interpretation_to_type_xref",
+      "from": {
+        "table": "type_single_interpretation",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_single_interpretation_to_type_citation",
+      "from": {
+        "table": "type_single_interpretation",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_citation_to_id",
+      "from": {
+        "table": "type_citation",
+        "column": "id",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "id",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_single_interpretation_to_type_comment",
+      "from": {
+        "table": "type_single_interpretation",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_single_interpretation_to_type_Interpretation",
+      "from": {
+        "table": "type_single_interpretation",
+        "column": "type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_Interpretation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_aggregated_interpretation_to_type_description_history",
+      "from": {
+        "table": "type_aggregated_interpretation",
+        "column": "description_history",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_description_history",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_aggregated_interpretation_to_condition_list",
+      "from": {
+        "table": "type_aggregated_interpretation",
+        "column": "condition_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "condition_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "condition_list_to_clin_asser_trait_set_type",
+      "from": {
+        "table": "condition_list",
+        "column": "trait_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "clin_asser_trait_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_set_type_to_clin_asser_trait_type",
+      "from": {
+        "table": "clin_asser_trait_set_type",
+        "column": "trait",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "clin_asser_trait_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_type_to_set_element_set_type",
+      "from": {
+        "table": "clin_asser_trait_type",
+        "column": "name",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "set_element_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_type_to_set_element_set_type",
+      "from": {
+        "table": "clin_asser_trait_type",
+        "column": "symbol",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "set_element_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "set_element_set_type_to_element_value",
+      "from": {
+        "table": "set_element_set_type",
+        "column": "element_value",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "element_value",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "element_value_to_type_citation",
+      "from": {
+        "table": "set_element_set_type",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "element_value_to_type_xref",
+      "from": {
+        "table": "set_element_set_type",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "element_value_to_type_comment",
+      "from": {
+        "table": "set_element_set_type",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_type_to_type_attribute_set",
+      "from": {
+        "table": "set_element_set_type",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "attribute_set_to_attribute",
+      "from": {
+        "table": "attribute_set",
+        "column": "attribute",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "attribute",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "attribute_to_type_attribute",
+      "from": {
+        "table": "attribute",
+        "column": "type_attribute",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "attribute_set_to_type_citation",
+      "from": {
+        "table": "attribute_set",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "attribute_set_to_type_xref",
+      "from": {
+        "table": "attribute_set",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "attribute_set_to_type_comment",
+      "from": {
+        "table": "attribute_set",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_type_to_trait_relationship",
+      "from": {
+        "table": "attribute_set",
+        "column": "trait_relationship",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "trait_relationship",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "trait_relationship_to_set_element_set_type",
+      "from": {
+        "table": "clin_asser_trait_type",
+        "column": "name",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "set_element_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "trait_relationship_to_set_element_set_type",
+      "from": {
+        "table": "trait_relationship",
+        "column": "symbol",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "set_element_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "trait_relationship_to_type_attribute_set",
+      "from": {
+        "table": "trait_relationship",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "trait_relationship_to_type_citation",
+      "from": {
+        "table": "trait_relationship",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "trait_relationship_to_type_xref",
+      "from": {
+        "table": "trait_relationship",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "trait_relationship_to_type_comment",
+      "from": {
+        "table": "attribute_set",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_set_type_to_set_element_set_type",
+      "from": {
+        "table": "clin_asser_trait_set_type",
+        "column": "name",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "set_element_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_set_type_to_set_element_set_type",
+      "from": {
+        "table": "clin_asser_trait_set_type",
+        "column": "symbol",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "set_element_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "clin_asser_trait_set_type_to_type_attribute_set",
+      "from": {
+        "table": "clin_asser_trait_set_type",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "clin_asser_trait_set_type_to_type_citation",
+      "from": {
+        "table": "clin_asser_trait_set_type",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_set_type_to_type_xref",
+      "from": {
+        "table": "clin_asser_trait_set_type",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "clin_asser_trait_set_type_to_type_comment",
+      "from": {
+        "table": "clin_asser_trait_set_type",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_allele_to_xref_list",
+      "from": {
+        "table": "type_allele",
+        "column": "xref_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "xref_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "xref_list_to_type_xref",
+      "from": {
+        "table": "xref_list",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_type_comment",
+      "from": {
+        "table": "type_allele",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_type_functional_consequence",
+      "from": {
+        "table": "type_allele",
+        "column": "functional_consequence",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_functional_consequence",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_functional_consequence_to_type_xref",
+      "from": {
+        "table": "type_functional_consequence",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_functional_consequence_to_type_comment",
+      "from": {
+        "table": "type_functional_consequence",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_functional_consequence_to_type_citation",
+      "from": {
+        "table": "type_functional_consequence",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_allele_frequency_list",
+      "from": {
+        "table": "type_allele",
+        "column": "allele_frequency_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "allele_frequency_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "allele_frequency_list_to_allele_frequency",
+      "from": {
+        "table": "allele_frequency_list",
+        "column": "allele_frequency",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "allele_frequency",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_allele_to_global_minor_allele_frequency",
+      "from": {
+        "table": "type_allele",
+        "column": "global_minor_allele_frequency",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "global_minor_allele_frequency",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "interpreted_record_to_type_haplotype",
+      "from": {
+        "table": "interpreted_record",
+        "column": "haplotype",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_haplotype",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_haplotype_to_type_allele",
+      "from": {
+        "table": "type_haplotype",
+        "column": "simple_allele",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_allele",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_haplotype_to_type_haplotype_variation_type",
+      "from": {
+        "table": "type_haplotype",
+        "column": "variation_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_haplotype_variation_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_haplotype_to_type_names",
+      "from": {
+        "table": "type_haplotype",
+        "column": "other_name_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_names",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_haplotype_to_hgvs_list",
+      "from": {
+        "table": "type_haplotype",
+        "column": "hgvs_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "hgvs_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_haplotype_to_type_aggregated_interpretation_set",
+      "from": {
+        "table": "type_haplotype",
+        "column": "interpretations",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregated_interpretation_set",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_haplotype_to_type_functional_consequence",
+      "from": {
+        "table": "type_haplotype",
+        "column": "functional_consequence",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_functional_consequence",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_haplotype_to_xref_list",
+      "from": {
+        "table": "type_haplotype",
+        "column": "xref_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "xref_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_haplotype_to_type_comment",
+      "from": {
+        "table": "type_haplotype",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_type_genotype",
+      "from": {
+        "table": "interpreted_record",
+        "column": "genotype",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_genotype",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_genotype_to_type_allele",
+      "from": {
+        "table": "type_genotype",
+        "column": "simple_allele",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_allele",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_type_haplotype",
+      "from": {
+        "table": "type_genotype",
+        "column": "haplotype",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_haplotype",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_type_variation_type",
+      "from": {
+        "table": "type_haplotype",
+        "column": "variation_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_variation_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_type_names",
+      "from": {
+        "table": "type_genotype",
+        "column": "other_name_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_names",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_hgvs_list",
+      "from": {
+        "table": "type_genotype",
+        "column": "hgvs_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "hgvs_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_type_functional_consequence",
+      "from": {
+        "table": "type_genotype",
+        "column": "functional_consequence",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_functional_consequence",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_type_aggregated_interpretation_set",
+      "from": {
+        "table": "type_genotype",
+        "column": "interpretations",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregated_interpretation_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_xref_list",
+      "from": {
+        "table": "type_genotype",
+        "column": "xref_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "xref_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_citation_list",
+      "from": {
+        "table": "type_genotype",
+        "column": "citation_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "citation_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_type_attribute_set",
+      "from": {
+        "table": "type_genotype",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+
+    {
+      "name": "type_genotype_to_type_comment",
+      "from": {
+        "table": "type_genotype",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "citation_list_to_type_citation",
+      "from": {
+        "table": "citation_list",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_type_aggregate_review_status_value",
+      "from": {
+        "table": "interpreted_record",
+        "column": "review_status",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregate_review_status_value",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_rcv_list",
+      "from": {
+        "table": "interpreted_record",
+        "column": "rcv_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "rcv_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "rcv_list_to_type_rcv",
+      "from": {
+        "table": "rcv_list",
+        "column": "rcv_accession",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_rcv",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_rcv_to_interpreted_condition_list",
+      "from": {
+        "table": "type_rcv",
+        "column": "interpreted_condition_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "interpreted_condition_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpreted_condition_list_to_type_rcv_interpreted_condition",
+      "from": {
+        "table": "interpreted_condition_list",
+        "column": "interpreted_condition",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_rcv_interpreted_condition",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_rcv_to_replaced_list",
+      "from": {
+        "table": "type_rcv",
+        "column": "replaced_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "replaced_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_type_aggregated_interpretation_set",
+      "from": {
+        "table": "interpreted_record",
+        "column": "interpretations",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregated_interpretation_set",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_clinical_assertion_list",
+      "from": {
+        "table": "interpreted_record",
+        "column": "clinical_assertion_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "clinical_assertion_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "clinical_assertion_list_to_measure_trait_type",
+      "from": {
+        "table": "clinical_assertion_list",
+        "column": "clinical_assertion",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "measure_trait_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_clinvar_submission_id",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "clinvar_submission_id",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "clinvar_submission_id",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_clinvar_accession",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "clinvar_accession",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "clinvar_accession",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "clinvar_accession_to_submitter_identifiers",
+      "from": {
+        "table": "clinvar_accession",
+        "column": "submitter_identifiers",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "submitter_identifiers",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_additional_submitters",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "additional_submitters",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "additional_submitters",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "additional_submitters_to_submitter_type",
+      "from": {
+        "table": "additional_submitters",
+        "column": "submitter_description",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "submitter_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "submitter_type_to_submitter_identifiers",
+      "from": {
+        "table": "submitter_type",
+        "column": "submitter_identifiers",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "submitter_identifiers",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_replaced_list",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "replaced_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "replaced_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "replaced_list_to_type_clinical_assertion_record_history",
+      "from": {
+        "table": "replaced_list",
+        "column": "replaced",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_clinical_assertion_record_history",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_review_status",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "review_status",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_submitter_review_status_value",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_type_single_interpretation",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "interpretation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_single_interpretation",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_custom_assertion_score",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "custom_assertion_score",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "custom_assertion_score",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "custom_assertion_score_to_type_citation",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "custom_assertion_score_to_type_xref",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_type_assertion_type_attr",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "assertion",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_assertion_type_attr",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_type_attribute_set",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_observed_in_list",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "observed_in_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "observed_in_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "observed_in_list_to_observed_in",
+      "from": {
+        "table": "observed_in_list",
+        "column": "observed_in",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "observation_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observation_set_to_type_sample",
+      "from": {
+        "table": "observation_set",
+        "column": "sample",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_sample",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_sample_to_sample_description",
+      "from": {
+        "table": "type_sample",
+        "column": "sample_description",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "sample_description",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "sample_description_to_type_comment",
+      "from": {
+        "table": "sample_description",
+        "column": "description",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "sample_description_to_type_citation",
+      "from": {
+        "table": "sample_description",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_sample_to_species",
+      "from": {
+        "table": "type_sample",
+        "column": "specie",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "specie",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_sample_to_age",
+      "from": {
+        "table": "type_sample",
+        "column": "age",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "age",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_sample_to_family_info",
+      "from": {
+        "table": "type_sample",
+        "column": "family_data",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "family_info",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_sample_to_indication_type",
+      "from": {
+        "table": "type_sample",
+        "column": "indication",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "indication_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_sample_to_type_citation",
+      "from": {
+        "table": "type_sample",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_sample_to_type_xref",
+      "from": {
+        "table": "type_sample",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_sample_to_type_comment",
+      "from": {
+        "table": "type_sample",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "indication_type_to_clin_asser_trait_type",
+      "from": {
+        "table": "type_sample",
+        "column": "trait",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "clin_asser_trait_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "indication_type_to_set_element_set_type",
+      "from": {
+        "table": "type_sample",
+        "column": "name",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "set_element_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "indication_type_to_set_element_set_type",
+      "from": {
+        "table": "type_sample",
+        "column": "symbol",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "set_element_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "indication_type_to_type_citation",
+      "from": {
+        "table": "indication_type",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "indication_type_to_type_xref",
+      "from": {
+        "table": "indication_type",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "indication_type_to_type_comment",
+      "from": {
+        "table": "indication_type",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "indication_type_to_type_attribute_set",
+      "from": {
+        "table": "indication_type",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observation_set_to_method",
+      "from": {
+        "table": "observation_set",
+        "column": "method",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "method",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "method_to_method_type",
+      "from": {
+        "table": "method",
+        "column": "method_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "method_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "method_type_to_type_citation",
+      "from": {
+        "table": "method_type",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "method_type_to_type_xref",
+      "from": {
+        "table": "method_type",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "method_type_to_type_software_set",
+      "from": {
+        "table": "method_type",
+        "column": "software",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_software_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "method_type_to_type_method_list",
+      "from": {
+        "table": "method_type",
+        "column": "method_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_method_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "method_type_to_method_attribute",
+      "from": {
+        "table": "method_type",
+        "column": "method_attribute",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "method_attribute",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "method_attribute_to_attribute",
+      "from": {
+        "table": "method_attribute",
+        "column": "attribute",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "attribute",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "method_type_to_obs_method_attribute",
+      "from": {
+        "table": "method_type",
+        "column": "obs_method_attribute",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "obs_method_attribute",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "obs_method_attribute_to_attribute",
+      "from": {
+        "table": "obs_method_attribute",
+        "column": "attribute",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "attribute",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "obs_method_attribute_to_type_comment",
+      "from": {
+        "table": "obs_method_attribute",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observation_set_to_observed_data",
+      "from": {
+        "table": "observation_set",
+        "column": "observed_data",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "observed_data",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observed_data_to_attribute",
+      "from": {
+        "table": "observed_data",
+        "column": "attribute",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "attribute",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "observed_data_to_type_severity",
+      "from": {
+        "table": "observed_data",
+        "column": "severity",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_severity",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "observed_data_to_type_citation",
+      "from": {
+        "table": "observed_data",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observed_data_to_type_xref",
+      "from": {
+        "table": "observed_data",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observed_data_to_type_comment",
+      "from": {
+        "table": "observed_data",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observation_set_to_co_occurrence_type",
+      "from": {
+        "table": "observation_set",
+        "column": "co_occurrence_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "co_occurrence_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observation_set_to_clin_asser_trait_set_type",
+      "from": {
+        "table": "observation_set",
+        "column": "trait_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "clin_asser_trait_set_type",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observation_set_to_type_citation",
+      "from": {
+        "table": "observation_set",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observation_set_to_type_xref",
+      "from": {
+        "table": "observation_set",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "observation_set_to_type_comment",
+      "from": {
+        "table": "observation_set",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "co_occurrence_type_to_type_zygosity",
+      "from": {
+        "table": "co_occurrence_type",
+        "column": "zygosity",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_zygosity",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "co_occurrence_type_to_type_allele_descr",
+      "from": {
+        "table": "co_occurrence_type",
+        "column": "allele_desc_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_allele_descr",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_allele_descr_to_type_zygosity",
+      "from": {
+        "table": "type_allele_descr",
+        "column": "zygosity",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_zygosity",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_allele_descr_to_clinical_significance_type",
+      "from": {
+        "table": "type_allele_descr",
+        "column": "clinical_significance",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "clinical_significance_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "clinical_significance_type_to_type_submitter_review_status_value",
+      "from": {
+        "table": "clinical_significance_type",
+        "column": "review_status",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_submitter_review_status_value",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "clinical_significance_type_to_type_comment",
+      "from": {
+        "table": "clinical_significance_type",
+        "column": "explanation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "clinical_significance_type_to_type_citation",
+      "from": {
+        "table": "clinical_significance_type",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "clinical_significance_type_to_type_xref",
+      "from": {
+        "table": "clinical_significance_type",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "clinical_significance_type_to_type_comment",
+      "from": {
+        "table": "clinical_significance_type",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_type_allele_scv",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "simple_allele",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_allele_scv",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_gene_list",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "gene_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "gene_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_name",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "name",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "name",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "gene_list_to_type_xref",
+      "from": {
+        "table": "gene_list",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_type_location",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "location",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_location",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_type_names",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "other_name_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_names",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_xref_list",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "xref_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "xref_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_citation_list",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "citation_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "citation_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_type_comment",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_molecular_consequence_list",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "molecular_consequence_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "molecular_consequence_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_molecular_consequence_list",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "molecular_consequence_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "molecular_consequence_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "molecular_consequence_list_to_molecular_consequence",
+      "from": {
+        "table": "molecular_consequence_list",
+        "column": "molecular_consequence",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "molecular_consequence",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "molecular_consequence_to_type_xref",
+      "from": {
+        "table": "molecular_consequence",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "molecular_consequence_to_type_citation",
+      "from": {
+        "table": "molecular_consequence",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "molecular_consequence_to_type_comment",
+      "from": {
+        "table": "molecular_consequence",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_type_functional_consequence",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "functional_consequence",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_functional_consequence",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_functional_consequence_to_type_xref",
+      "from": {
+        "table": "type_functional_consequence",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_functional_consequence_to_type_citation",
+      "from": {
+        "table": "type_functional_consequence",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_functional_consequence_to_type_comment",
+      "from": {
+        "table": "type_functional_consequence",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_allele_scv_to_type_attribute_set",
+      "from": {
+        "table": "type_allele_scv",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_haplo_type_scv_to_type_allele_scv",
+      "from": {
+        "table": "type_haplo_type_scv",
+        "column": "simple_allele",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_allele_scv",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_haplo_type_scv_to_type_names",
+      "from": {
+        "table": "type_haplo_type_scv",
+        "column": "other_name_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_names",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_haplo_type_scv_to_type_aggregated_interpretation_set",
+      "from": {
+        "table": "type_haplo_type_scv",
+        "column": "interpretations",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregated_interpretation_set",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_haplo_type_scv_to_type_functional_consequence",
+      "from": {
+        "table": "type_haplo_type_scv",
+        "column": "functional_consequence",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_functional_consequence",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_haplo_type_scv_to_xref_list",
+      "from": {
+        "table": "type_haplo_type_scv",
+        "column": "xref_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "xref_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_haplo_type_scv_to_citation_list",
+      "from": {
+        "table": "type_haplo_type_scv",
+        "column": "citation_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "citation_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_haplo_type_scv_to_type_comment",
+      "from": {
+        "table": "type_haplo_type_scv",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_haplo_type_scv_to_type_attribute_set",
+      "from": {
+        "table": "type_haplo_type_scv",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_type_geno_type_scv",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "geno_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_geno_type_scv",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_type_haplo_type_scv",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "haplo_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_haplo_type_scv",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_type_allele_scv",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "simple_allele",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_allele_scv",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_type_haplo_type_scv",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "haplo_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_haplo_type_scv",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_type_variation_type",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "variation_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_variation_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_type_functional_consequence",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "functional_consequence",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_functional_consequence",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_type_aggregated_interpretation_set",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "interpretations",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregated_interpretation_set",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_xref_list",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "xref_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "xref_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_citation_list",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "citation_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "citation_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_type_comment",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "type_geno_type_scv_to_type_attribute_set",
+      "from": {
+        "table": "type_geno_type_scv",
+        "column": "attribute_set",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_attribute_set",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_type_citation",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_type_comment",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "comment",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_comment",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "measure_trait_type_to_submission_name_list",
+      "from": {
+        "table": "measure_trait_type",
+        "column": "submission_name_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "submission_name_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_trait_mapping_list",
+      "from": {
+        "table": "interpreted_record",
+        "column": "trait_mapping_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "trait_mapping_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "trait_mapping_list_to_trait_mapping",
+      "from": {
+        "table": "trait_mapping_list",
+        "column": "trait_mapping",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "trait_mapping",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "trait_mapping_to_med_gen",
+      "from": {
+        "table": "trait_mapping",
+        "column": "med_gen",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "med_gen",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "trait_mapping_to_mapping_type",
+      "from": {
+        "table": "trait_mapping",
+        "column": "mapping_type",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "mapping_type",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_deleted_scv_list",
+      "from": {
+        "table": "interpreted_record",
+        "column": "deleted_scv_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "deleted_scv_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "deleted_scv_list_to_type_deleted_scv",
+      "from": {
+        "table": "deleted_scv_list",
+        "column": "scv",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_deleted_scv",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "type_deleted_scv_to_accession",
+      "from": {
+        "table": "type_deleted_scv",
+        "column": "accession",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "accession",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpreted_record_to_general_citations",
+      "from": {
+        "table": "interpreted_record",
+        "column": "general_citations",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "general_citations",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "general_citations_to_type_citation",
+      "from": {
+        "table": "general_citations",
+        "column": "citation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_citation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "general_citations_to_type_xref",
+      "from": {
+        "table": "general_citations",
+        "column": "xref",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_xref",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "variation_archive_type_to_included_recorded",
+      "from": {
+        "table": "variation_archive_type",
+        "column": "included_recorded",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "included_recorded",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "included_record_to_type_allele",
+      "from": {
+        "table": "included_recorded",
+        "column": "siimple_allele",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_allele",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "included_record_to_type_included_record_review_status_value",
+      "from": {
+        "table": "included_recorded",
+        "column": "review_status",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_included_record_review_status_value",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "included_record_to_type_aggregated_interpretation_set",
+      "from": {
+        "table": "included_recorded",
+        "column": "interpretations",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_aggregated_interpretation_set",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "included_record_to_submitted_interpretation_list",
+      "from": {
+        "table": "included_recorded",
+        "column": "submitted_interpretation_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "submitted_interpretation_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "submitted_interpretation_list_to_type_scv",
+      "from": {
+        "table": "submitted_interpretation_list",
+        "column": "scv",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "type_scv",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "included_record_to_interpretation_variation_list",
+      "from": {
+        "table": "included_recorded",
+        "column": "interpretation_variation_list",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "interpretation_variation_list",
+        "column": "uid",
+        "cardinality": "one"
+      }
+    },
+
+    {
+      "name": "interpretation_variation_list_to_interpretation_variation",
+      "from": {
+        "table": "interpretation_variation_list",
+        "column": "interpretation_variation",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "interpretation_variation",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    },
+
+    {
+      "name": "included_record_to_general_citations",
+      "from": {
+        "table": "included_recorded",
+        "column": "general_citations",
+        "cardinality": "one"
+      },
+      "to": {
+        "table": "general_citations",
+        "column": "uid",
+        "cardinality": "many"
+      }
+    }
+  ]
+}
