@@ -556,7 +556,7 @@
         "name": "haploin_sufficiency",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -577,7 +577,7 @@
         "name": "triplo_sensitivity",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -598,7 +598,7 @@
         "name": "type_xref",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -627,7 +627,7 @@
         "name": "type_status",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -640,7 +640,7 @@
         "name": "type_gene_variant",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -653,7 +653,7 @@
         "name": "type_names",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -672,7 +672,7 @@
         "name": "hgvs_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -686,7 +686,7 @@
         "name": "type_hgvs_expression",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -716,7 +716,7 @@
         "name": "type_nucleotide_sequence_expression",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -758,7 +758,7 @@
         "name": "type_protein_sequence_expression",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -792,7 +792,7 @@
         "name": "type_hgvs",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -805,7 +805,7 @@
         "name": "type_aggregated_interpretation_set",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -819,7 +819,7 @@
         "name": "type_aggregated_interpretation",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -849,7 +849,7 @@
         "name": "type_single_interpretation",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -896,7 +896,7 @@
         "name": "type_citation",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -926,7 +926,7 @@
         "name": "id",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -943,7 +943,7 @@
         "name": "type_interpretation",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -956,7 +956,7 @@
         "name": "type_description_history",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -974,7 +974,7 @@
         "name": "condition_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -988,7 +988,7 @@
         "name": "clin_asser_trait_set_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1029,7 +1029,7 @@
         "name": "clin_asser_trait_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1066,7 +1066,7 @@
         "name": "set_element_set_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1079,7 +1079,7 @@
         "name": "element_value",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1111,7 +1111,7 @@
         "name": "type_attribute_set",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1139,7 +1139,7 @@
         "name": "attribute",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1156,7 +1156,7 @@
         "name": "type_attribute",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1177,7 +1177,7 @@
         "name": "trait_relationship",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1225,7 +1225,7 @@
         "name": "xref_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1239,7 +1239,7 @@
         "name": "allele_frequency_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1253,7 +1253,7 @@
         "name": "allele_frequency",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1274,7 +1274,7 @@
         "name": "global_minor_allele_frequency",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1299,7 +1299,7 @@
         "name": "type_haplotype",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1355,7 +1355,7 @@
         "name": "type_haplotype_variation_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1368,7 +1368,7 @@
         "name": "type_genotype",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1435,7 +1435,7 @@
         "name": "type_variation_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1448,7 +1448,7 @@
         "name": "citation_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1462,7 +1462,7 @@
         "name": "type_aggregate_review_status_value",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1475,7 +1475,7 @@
         "name": "rcv_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1497,7 +1497,7 @@
         "name": "replaced_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1511,7 +1511,7 @@
         "name": "type_rcv",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1556,7 +1556,7 @@
         "name": "interpreted_condition_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1570,7 +1570,7 @@
         "name": "interpreted_condition",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1591,7 +1591,7 @@
         "name": "clinical_assertion_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1605,7 +1605,7 @@
         "name": "measure_trait_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1727,7 +1727,7 @@
         "name": "clinvar_submission_id",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1752,7 +1752,7 @@
         "name": "clinvar_accession",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1781,7 +1781,7 @@
         "name": "submitter_identifiers",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1806,7 +1806,7 @@
         "name": "additional_submitters",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1820,7 +1820,7 @@
         "name": "submitter_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1837,7 +1837,7 @@
         "name": "type_clinical_assertion_record_history",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1862,7 +1862,7 @@
         "name": "type_submitter_review_status_value",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1875,7 +1875,7 @@
         "name": "custom_assertion_score",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1902,7 +1902,7 @@
         "name": "type_assertion_type_attr",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1915,7 +1915,7 @@
         "name": "observed_in_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1929,7 +1929,7 @@
         "name": "observation_set",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -1976,7 +1976,7 @@
         "name": "type_sample",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2080,7 +2080,7 @@
         "name": "sample_description",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2097,7 +2097,7 @@
         "name": "age",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2118,7 +2118,7 @@
         "name": "family_info",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2151,7 +2151,7 @@
         "name": "indication_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2202,7 +2202,7 @@
         "name": "method",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2219,7 +2219,7 @@
         "name": "method_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2293,7 +2293,7 @@
         "name": "type_software_set",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2314,7 +2314,7 @@
         "name": "type_method_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2327,7 +2327,7 @@
         "name": "method_attribute",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2340,7 +2340,7 @@
         "name": "obs_method_attribute",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2358,7 +2358,7 @@
         "name": "observed_data",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2390,7 +2390,7 @@
         "name": "type_severity",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2403,7 +2403,7 @@
         "name": "co_occurrence_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2425,7 +2425,7 @@
         "name": "type_zygosity",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2438,7 +2438,7 @@
         "name": "type_allele_descr",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2463,7 +2463,7 @@
         "name": "clinical_significance_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2503,7 +2503,7 @@
         "name": "type_allele_scv",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2570,7 +2570,7 @@
         "name": "name",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2587,7 +2587,7 @@
         "name": "molecular_consequence_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2601,7 +2601,7 @@
         "name": "molecular_consequence",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2641,7 +2641,7 @@
         "name": "type_functional_consequence",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2669,7 +2669,7 @@
         "name": "type_haplo_type_scv",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2726,7 +2726,7 @@
         "name": "type_geno_type_scv",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2784,7 +2784,7 @@
         "name": "submission_name_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2798,7 +2798,7 @@
         "name": "trait_mapping_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2845,7 +2845,7 @@
         "name": "med_gen",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2862,7 +2862,7 @@
         "name": "mapping_type",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2879,7 +2879,7 @@
         "name": "deleted_scv_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2893,7 +2893,7 @@
         "name": "type_deleted_scv",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2910,7 +2910,7 @@
         "name": "accession",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2931,7 +2931,7 @@
         "name": "general_citations",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2950,7 +2950,7 @@
         "name": "included_record",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2984,7 +2984,7 @@
         "name": "type_included_record_review_status_value",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -2997,7 +2997,7 @@
         "name": "submitted_interpretation_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -3011,7 +3011,7 @@
         "name": "type_scv",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -3032,7 +3032,7 @@
         "name": "interpretation_variation_list",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
@@ -3046,7 +3046,7 @@
         "name": "interpretation_variation",
         "columns": [
           {
-            "name": "uid",
+            "column": "persistent_id",
             "datatype": "string"
           },
           {
