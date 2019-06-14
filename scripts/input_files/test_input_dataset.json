@@ -1,34 +1,22 @@
 {
+  "name": "study_name",
+  "description": "study_description",
   "schema": {
-    "relationships": [
-      {
-        "name": "table_1_to_table_3",
-        "to": {
-          "table": "table_3",
-          "column": "column_1",
-          "cardinality": "many"
-        },
-        "from": {
-          "table": "table_1",
-          "column": "column_2",
-          "cardinality": "one"
-        }
-      },
-      {
-        "name": "table_1_to_table_2",
-        "to": {
-          "table": "table_2",
-          "column": "column_1",
-          "cardinality": "one"
-        },
-        "from": {
-          "table": "table_1",
-          "column": "column_1",
-          "cardinality": "one"
-        }
-      }
-    ],
     "tables": [
+      {
+        "name": "table_1",
+        "columns": [
+          {
+            "name": "column_1",
+            "datatype": "string"
+          },
+          {
+            "name": "column_2",
+            "datatype": "string",
+            "array_of": true
+          }
+        ]
+      },
       {
         "name": "table_2",
         "columns": [
@@ -46,20 +34,34 @@
       {
         "name": "table_3",
         "columns": []
+      }
+    ],
+    "relationships": [
+      {
+        "name": "table_1_to_table_2",
+        "from": {
+          "table": "table_1",
+          "column": "column_1",
+          "cardinality": "one"
+        },
+        "to": {
+          "table": "table_2",
+          "column": "column_1",
+          "cardinality": "one"
+        }
       },
       {
-        "name": "table_1",
-        "columns": [
-          {
-            "name": "column_1",
-            "datatype": "string"
-          },
-          {
-            "name": "column_2",
-            "datatype": "string",
-            "array_of": true
-          }
-        ]
+        "name": "table_1_to_table_3",
+        "from": {
+          "table": "table_1",
+          "column": "column_2",
+          "cardinality": "one"
+        },
+        "to": {
+          "table": "table_3",
+          "column": "column_1",
+          "cardinality": "many"
+        }
       }
     ],
     "assets": [
@@ -87,7 +89,5 @@
         ]
       }
     ]
-  },
-  "description": "study_description",
-  "name": "study_name"
+  }
 }
