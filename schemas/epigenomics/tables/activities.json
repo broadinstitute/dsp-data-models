@@ -1,0 +1,10 @@
+{
+    "name": "activities",
+    "columns": [
+        {"name": "used_antibodies", "datatype": "string", "array_of": true},
+        {"name": "used_files", "datatype": "string", "array_of": true},
+        {"name": "generated_files", "datatype": "string", "array_of": true},
+        {"name": "used_biosamples", "datatype": "string", "array_of": true},
+        {"name": "generated_library", "datatype": "string"}
+    ]
+}

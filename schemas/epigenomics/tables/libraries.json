@@ -1,0 +1,6 @@
+{
+    "name": "libraries",
+    "columns": [
+        {"name": "used_by", "datatype": "string", "array_of": true}
+    ]
+}
