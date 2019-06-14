@@ -96,7 +96,7 @@ if __name__ == "__main__":
                         required=True,
                         help="the directory containing assets, relationships and tables JSON files")
     parser.add_argument("--output-name",
-                        "-0",
+                        "-o",
                         dest="output_name",
                         required=True,
                         help="the name of the output JSON, containing the combined assets, relationships and tables")
