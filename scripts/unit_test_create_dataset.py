@@ -28,9 +28,8 @@ class CreateDatasetTest(unittest.TestCase):
             with open(output_dataset, "r") as output_file:
                 output_dict = json.load(output_file)
                 truth_dict = json.load(truth_file)
-
-
         ddiff = DeepDiff(output_dict, truth_dict, ignore_order=True)
+
         self.assertTrue(len(ddiff) == 0,
                         "Error: The created json is not equal to truth file")
 

@@ -1,0 +1,13 @@
+{
+  "name": "biosample_to_biosample_derived",
+  "from": {
+    "table": "biosample",
+    "column": "derived",
+    "cardinality": "one"
+  },
+  "to": {
+    "table": "biosample",
+    "column": "id",
+    "cardinality": "many"
+  }
+}

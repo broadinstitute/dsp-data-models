@@ -1,0 +1,13 @@
+{
+  "name": "biosample_to_activity",
+  "from": {
+    "table": "biosample",
+    "column": "used_by",
+    "cardinality": "one"
+  },
+  "to": {
+    "table": "activity",
+    "column": "id",
+    "cardinality": "many"
+  }
+},
