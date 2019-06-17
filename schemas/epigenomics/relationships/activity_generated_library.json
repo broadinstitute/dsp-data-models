@@ -1,0 +1,13 @@
+{
+  "name": "activity_to_library_generated",
+  "from": {
+    "table": " activity",
+    "column": "generated",
+    "cardinality": "one"
+  },
+  "to": {
+    "table": "library",
+    "column": "id",
+    "cardinality": "many"
+  }
+}

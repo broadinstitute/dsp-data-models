@@ -1,0 +1,13 @@
+{
+  "name": "file_to_activity_used_by",
+  "from": {
+    "table": "file",
+    "column": "used_by",
+    "cardinality": "one"
+  },
+  "to": {
+    "table": "activity",
+    "column": "id",
+    "cardinality": "many"
+  }
+}
