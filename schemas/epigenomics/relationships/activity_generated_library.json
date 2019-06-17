@@ -1,12 +1,12 @@
 {
-  "name": "activity_to_library_generated",
+  "name": "activities_to_libraries_generated",
   "from": {
-    "table": " activity",
+    "table": " activities",
     "column": "generated",
     "cardinality": "one"
   },
   "to": {
-    "table": "library",
+    "table": "libraries",
     "column": "id",
     "cardinality": "many"
   }

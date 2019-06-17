@@ -1,12 +1,12 @@
 {
-  "name": "activity_to_biosample",
+  "name": "activities_to_biosamples",
   "from": {
-    "table": " activity",
+    "table": " activities",
     "column": "used",
     "cardinality": "one"
   },
   "to": {
-    "table": "biosample",
+    "table": "biosamples",
     "column": "id",
     "cardinality": "many"
   }

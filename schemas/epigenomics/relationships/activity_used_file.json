@@ -1,12 +1,12 @@
 {
-  "name": "activity_to_file",
+  "name": "activities_to_files",
   "from": {
-    "table": " activity",
+    "table": " activities",
     "column": "used",
     "cardinality": "one"
   },
   "to": {
-    "table": "file",
+    "table": "files",
     "column": "id",
     "cardinality": "many"
   }

@@ -1,12 +1,12 @@
 {
-  "name": "library_to_activity_used_by",
+  "name": "libraries_to_activities_used_by",
   "from": {
-    "table": "library",
+    "table": "libraries",
     "column": "used_by",
     "cardinality": "one"
   },
   "to": {
-    "table": "activity",
+    "table": "activities",
     "column": "id",
     "cardinality": "many"
   }

@@ -1,6 +1,6 @@
 {
-  "name": "study_name",
-  "description": "study_description",
+  "name": "dataset_name",
+  "description": "dataset_description",
   "schema": {
     "tables": [
       {

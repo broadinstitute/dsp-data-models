@@ -1,12 +1,12 @@
 {
-  "name": "activity_to_antibody",
+  "name": "activities_to_antibodies",
   "from": {
-    "table": " activity",
+    "table": " activities",
     "column": "used",
     "cardinality": "one"
   },
   "to": {
-    "table": "antibody",
+    "table": "antibodies",
     "column": "id",
     "cardinality": "one"
   }
