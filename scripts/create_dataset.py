@@ -1,4 +1,6 @@
-import os
+#!/usr/bin/env python2
+
+mport os
 import argparse
 import json
 
