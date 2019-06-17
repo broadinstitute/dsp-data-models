@@ -1,7 +1,7 @@
 {
   "name": "activities_to_antibodies",
   "from": {
-    "table": " activities",
+    "table": "activities",
     "column": "used",
     "cardinality": "one"
   },

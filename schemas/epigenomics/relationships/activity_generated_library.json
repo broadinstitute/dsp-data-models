@@ -1,7 +1,7 @@
 {
   "name": "activities_to_libraries_generated",
   "from": {
-    "table": " activities",
+    "table": "activities",
     "column": "generated",
     "cardinality": "one"
   },

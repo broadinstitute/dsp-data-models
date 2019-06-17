@@ -1,7 +1,7 @@
 {
   "name": "activities_to_biosamples",
   "from": {
-    "table": " activities",
+    "table": "activities",
     "column": "used",
     "cardinality": "one"
   },
