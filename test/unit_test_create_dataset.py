@@ -20,7 +20,8 @@ class CreateDatasetTest(unittest.TestCase):
         # run the create dataset python script with given input JSON files
         make_new_dataset(dataset_name="dataset_name",
                          dataset_description="dataset_description",
-                         parent_directory=os.path.join(current_file_dir, "input_files"),
+                         input_tables_directory=os.path.join(current_file_dir, "input_files/tables"),
+                         input_assets_directory=os.path.join(current_file_dir, "input_files/assets"),
                          output_name=output_dataset)
 
         # compare expected outputs from python script to truth files
@@ -30,9 +31,9 @@ class CreateDatasetTest(unittest.TestCase):
                 truth_dict = json.load(truth_file)
         ddiff = DeepDiff(output_dict, truth_dict, ignore_order=True)
 
+        # if there are differences
         self.assertTrue(len(ddiff) == 0,
-                        "Error: The created json is not equal to truth file")
-
+                        "Error: The created json is not equal to truth file\n {}".format(ddiff))
 
 
 if __name__ == '__main__':
