@@ -6,7 +6,7 @@
             "name": "column_2",
             "datatype": "string",
             "array_of": true,
-            "references": [
+            "relationships": [
                 {
                     "table_name": "table_4",
                     "column_name": "column_1"

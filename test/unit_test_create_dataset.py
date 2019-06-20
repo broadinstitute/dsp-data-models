@@ -3,13 +3,14 @@
 import os
 import unittest
 import tempfile
-from scripts.create_dataset import make_new_dataset
+from scripts import create_dataset
 import json
 from deepdiff import DeepDiff
+import errno
 
 
 class CreateDatasetTest(unittest.TestCase):
-    def test_files(self):
+    def test_make_new_dataset(self):
         # file paths for truth files
         current_file_dir = os.path.dirname(__file__)
         truth_output_schema_json = os.path.join(current_file_dir, "input_files/test_input_dataset.json")
@@ -18,11 +19,11 @@ class CreateDatasetTest(unittest.TestCase):
         output_dataset = os.path.join(tempfile.mkdtemp(), 'test_output_dataset')
 
         # run the create dataset python script with given input JSON files
-        make_new_dataset(dataset_name="dataset_name",
-                         dataset_description="dataset_description",
-                         input_tables_directory=os.path.join(current_file_dir, "input_files/tables"),
-                         input_assets_directory=os.path.join(current_file_dir, "input_files/assets"),
-                         output_name=output_dataset)
+        create_dataset.make_new_dataset(dataset_name="dataset_name",
+                                        dataset_description="dataset_description",
+                                        input_tables_directory=os.path.join(current_file_dir, "input_files/tables"),
+                                        input_assets_directory=os.path.join(current_file_dir, "input_files/assets"),
+                                        output_name=output_dataset)
 
         # compare expected outputs from python script to truth files
         with open(truth_output_schema_json, "r") as truth_file:
@@ -33,7 +34,37 @@ class CreateDatasetTest(unittest.TestCase):
 
         # if there are differences
         self.assertTrue(len(ddiff) == 0,
-                        "Error: The created json is not equal to truth file\n {}".format(ddiff))
+                        "Error: The created json is not equal to truth file\n{}".format(ddiff))
+
+    def test_validate_table_and_column(self):
+        current_file_dir = os.path.dirname(__file__)
+        input_tables = create_dataset.get_json(os.path.join(current_file_dir, "input_files/tables"))
+
+        # check an expected valid table and column pair
+        self.assertTrue(create_dataset.validate_table_and_column(table_name="table_2",
+                                                                 column_name="column_1",
+                                                                 input_tables=input_tables),
+                        "Error: The valid table and column name could not be validated using input JSON tables")
+
+        # check an expected invalid table name
+        with self.assertRaises(SystemExit) as cm:
+            create_dataset.validate_table_and_column(table_name="invalid_table_name",
+                                                     column_name="column_1",
+                                                     input_tables=input_tables)
+        the_exception = cm.exception
+        self.assertEqual(the_exception.code,
+                         errno.EBADF,
+                         "Error: The invalid table name was validated using input JSON tables")
+
+        # check an expected invalid column name
+        with self.assertRaises(SystemExit) as cm:
+            create_dataset.validate_table_and_column(table_name="table_4",
+                                                     column_name="invalid_column_name",
+                                                     input_tables=input_tables)
+        the_exception = cm.exception
+        self.assertEqual(the_exception.code,
+                         errno.EBADF,
+                         "Error: The invalid column name was validated using input JSON tables")
 
 
 if __name__ == '__main__':
