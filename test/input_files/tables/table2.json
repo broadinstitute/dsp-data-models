@@ -4,7 +4,7 @@
         {"name": "column_1", "datatype": "string"},
         {
             "name": "column_2",
-            "datatype": "string",
+            "datatype": "link",
             "array_of": true,
             "relationships": [
                 {

@@ -131,7 +131,7 @@ def create_column_and_relationships(input_relationships,
 
     column = {
         "name": column_name,
-        "datatype": "String" if column_datatype == "link" else column_datatype,
+        "datatype": "string" if column_datatype == "link" else column_datatype,
         "array_of": column_array_of is True
     }
 
