@@ -43,28 +43,38 @@ class CreateDatasetTest(unittest.TestCase):
         # check an expected valid table and column pair
         self.assertTrue(create_dataset.validate_table_and_column(table_name="table_2",
                                                                  column_name="column_1",
+                                                                 column_datatype="string",
                                                                  input_tables=input_tables),
-                        "Error: The valid table and column name could not be validated using input JSON tables")
+                        "Error: The valid table and column could not be validated using input JSON tables")
+
+        # check an expected invalid input column datatype
+        self.assertFalse(create_dataset.validate_table_and_column(table_name="table_2",
+                                                                  column_name="column_1",
+                                                                  column_datatype="float",
+                                                                  input_tables=input_tables),
+                        "Error: The invalid input column datatype was validated using input JSON tables")
 
         # check an expected invalid table name
-        with self.assertRaises(SystemExit) as cm:
-            create_dataset.validate_table_and_column(table_name="invalid_table_name",
-                                                     column_name="column_1",
-                                                     input_tables=input_tables)
-        the_exception = cm.exception
-        self.assertEqual(the_exception.code,
-                         errno.EBADF,
+        self.assertFalse(create_dataset.validate_table_and_column(table_name="invalid_table_name",
+                                                                  column_name="column_1",
+                                                                  column_datatype="string",
+                                                                  input_tables=input_tables),
                          "Error: The invalid table name was validated using input JSON tables")
 
         # check an expected invalid column name
-        with self.assertRaises(SystemExit) as cm:
-            create_dataset.validate_table_and_column(table_name="table_4",
-                                                     column_name="invalid_column_name",
-                                                     input_tables=input_tables)
-        the_exception = cm.exception
-        self.assertEqual(the_exception.code,
-                         errno.EBADF,
+        self.assertFalse(create_dataset.validate_table_and_column(table_name="table_4",
+                                                                  column_name="invalid_column_name",
+                                                                  column_datatype="string",
+                                                                  input_tables=input_tables),
                          "Error: The invalid column name was validated using input JSON tables")
+
+        invalid_input_tables = create_dataset.get_json(os.path.join(current_file_dir, "input_files/invalid_tables"))
+        # check a invalid relationship with two columns containing two different datatype
+        self.assertFalse(create_dataset.validate_table_and_column(table_name="table_2",
+                                                                  column_name="column_1",
+                                                                  column_datatype="float",
+                                                                  input_tables=invalid_input_tables),
+                         "Error: The invalid relationship with 2 columns containing 2 different datatype was validated")
 
 
 if __name__ == '__main__':

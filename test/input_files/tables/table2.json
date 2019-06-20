@@ -4,9 +4,9 @@
         {"name": "column_1", "datatype": "string"},
         {
             "name": "column_2",
-            "datatype": "link",
+            "datatype": "float",
             "array_of": true,
-            "relationships": [
+            "links": [
                 {
                     "table_name": "table_4",
                     "column_name": "column_1"

@@ -1,0 +1,13 @@
+{
+    "name": "table_2",
+    "columns": [
+        {
+            "name": "column_1",
+            "datatype": "string"
+        },
+        {
+            "name": "column_1",
+            "datatype": "float"
+        }
+    ]
+}

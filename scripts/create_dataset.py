@@ -2,8 +2,6 @@
 import os
 import argparse
 import json
-import errno
-import sys
 
 
 def make_new_dataset(dataset_name, dataset_description, input_tables_directory, input_assets_directory, output_name):
@@ -48,8 +46,8 @@ def get_json(parent_directory):
         if file.endswith(".json"):
             with open(os.path.join(parent_directory, file), "r") as json_file:
                 json_as_dict = json.load(json_file)
-            # add the name field field of the json as a kay to make each json searchable
-            input_dict.update({json_as_dict["name"]: json_as_dict})
+            # add the name field field of the json as a key to make each json searchable
+            input_dict[json_as_dict["name"]] = json_as_dict
     return input_dict
 
 
@@ -78,14 +76,14 @@ def create_table_and_relationships(input_table, input_tables):
     input_table_name = input_table["name"]
     columns, table_relationships = [], []
     for input_column in input_table["columns"]:
-        column, relationships = create_column_and_relationships(input_relationships=input_column.get("relationships"),
-                                                                column_name=input_column["name"],
-                                                                column_datatype=input_column["datatype"],
-                                                                column_array_of=input_column.get("array_of"),
-                                                                input_table_name=input_table_name,
-                                                                input_tables=input_tables)
+        column, new_relationships = create_column_and_relationships(input_relationships=input_column.get("links"),
+                                                                    column_name=input_column["name"],
+                                                                    column_datatype=input_column["datatype"],
+                                                                    column_array_of=input_column.get("array_of"),
+                                                                    input_table_name=input_table_name,
+                                                                    input_tables=input_tables)
         columns.append(column)
-        table_relationships.extend(relationships)
+        table_relationships.extend(new_relationships)
 
     table = {"name": input_table_name, "columns": columns}
 
@@ -107,6 +105,15 @@ def create_column_and_relationships(input_relationships,
     :param input_table_name: the name of input JSON table that has the input_column
     :param input_tables: the input tables that have been added to a dict and used to validate the created relationships
     """
+    if not any([validate_table_and_column(table_name=input_relationship["table_name"],
+                                          column_name=input_relationship["column_name"],
+                                          column_datatype=column_datatype,
+                                          input_tables=input_tables)
+                for input_relationship in input_relationships] if input_relationships else [True]):
+        raise SystemExit("Error: The relationship(s) provided for table, {}, column {} are not valid"
+                         .format(input_table_name, column_name))
+
+
     relationships = [
         {
             "name": "{}_{}_to_{}_{}".format(input_table_name,
@@ -117,45 +124,37 @@ def create_column_and_relationships(input_relationships,
             "to": {
                     "table": input_relationship["table_name"],
                     "column": input_relationship["column_name"],
-                    "cardinality": "many" if column_array_of is True else "one"
+                    "cardinality": "many" if column_array_of else "one"
                   }
         }
-        if validate_table_and_column(
-               table_name=input_table_name,
-               column_name=column_name,
-               input_tables=input_tables) and validate_table_and_column(table_name=input_relationship["table_name"],
-                                                                        column_name=input_relationship["column_name"],
-                                                                        input_tables=input_tables)
-        else []
         for input_relationship in input_relationships] if input_relationships else []
 
     column = {
         "name": column_name,
-        "datatype": "string" if column_datatype == "link" else column_datatype,
+        "datatype": column_datatype,
         "array_of": column_array_of is True
     }
 
     return column, relationships
 
 
-def validate_table_and_column(table_name, column_name, input_tables):
+def validate_table_and_column(table_name, column_name, column_datatype, input_tables):
     """
-    Validates a relationship checking the the given table and column exist in input tables.
+    Validates a relationship checking the the given table and column exist in input tables and the datatype is correct.
     :param table_name: the name of table containing has the input_column that will be validated against the input tables
     :param column_name: the name of the input_column that will be validated against the input tables
+    :param column_datatype: the primitive type enforced for values of the input JSON column
     :param input_tables: the input tables that have been added to a dict and used to validate the created relationships
     """
-    if True in [
-        True in [
-                input_column["name"] == column_name
-                for input_column in input_tables[input_table_name]["columns"]]
-            if table_name == input_table_name else [] for input_table_name in input_tables]:
-        return True
+    for input_table_name in input_tables:
+        if input_table_name == table_name:
+            for input_column in input_tables[input_table_name]["columns"]:
+                if input_column["name"] == column_name:
+                    if input_column["datatype"] != column_datatype:
+                        return False
+                    return True
 
-    # raise in error if either the column or table name does not exist in the input tables
-    sys.stderr.write("\nThe table name and relationship: Column, {}, in table, {} does not exist\n"
-                     .format(column_name, table_name))
-    raise SystemExit(errno.EBADF)
+    return False
 
 
 def save_dataset_as_json(dataset, output_name):
