@@ -113,7 +113,6 @@ def create_column_and_relationships(input_relationships,
         raise SystemExit("Error: The relationship(s) provided for table, {}, column {} are not valid"
                          .format(input_table_name, column_name))
 
-
     relationships = [
         {
             "name": "{}_{}_to_{}_{}".format(input_table_name,
@@ -138,6 +137,7 @@ def create_column_and_relationships(input_relationships,
     return column, relationships
 
 
+# TODO add validation for duplicate assets, tables, columns and relationships
 def validate_table_and_column(table_name, column_name, column_datatype, input_tables):
     """
     Validates a relationship checking the the given table and column exist in input tables and the datatype is correct.
