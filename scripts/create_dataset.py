@@ -105,28 +105,30 @@ def create_column_and_relationships(input_relationships,
     :param input_table_name: the name of input JSON table that has the input_column
     :param input_tables: the input tables that have been added to a dict and used to validate the created relationships
     """
-    if not any([validate_table_and_column(table_name=input_relationship["table_name"],
-                                          column_name=input_relationship["column_name"],
-                                          column_datatype=column_datatype,
-                                          input_tables=input_tables)
-                for input_relationship in input_relationships] if input_relationships else [True]):
-        raise SystemExit("Error: The relationship(s) provided for table, {}, column {} are not valid"
-                         .format(input_table_name, column_name))
+    relationships = []
+    if input_relationships:
+        if not any([validate_table_and_column(table_name=input_relationship["table_name"],
+                                              column_name=input_relationship["column_name"],
+                                              column_datatype=column_datatype,
+                                              input_tables=input_tables)
+                    for input_relationship in input_relationships]):
+            raise SystemExit("Error: The relationship(s) provided for table, {}, column {} are not valid"
+                             .format(input_table_name, column_name))
 
-    relationships = [
-        {
-            "name": "{}_{}_to_{}_{}".format(input_table_name,
-                                            column_name,
-                                            input_relationship["table_name"],
-                                            input_relationship["column_name"]),
-            "from": {"table": input_table_name, "column": column_name, "cardinality": "one"},
-            "to": {
-                    "table": input_relationship["table_name"],
-                    "column": input_relationship["column_name"],
-                    "cardinality": "many" if column_array_of else "one"
-                  }
-        }
-        for input_relationship in input_relationships] if input_relationships else []
+        relationships = [
+            {
+                "name": "{}_{}_to_{}_{}".format(input_table_name,
+                                                column_name,
+                                                input_relationship["table_name"],
+                                                input_relationship["column_name"]),
+                "from": {"table": input_table_name, "column": column_name, "cardinality": "one"},
+                "to": {
+                        "table": input_relationship["table_name"],
+                        "column": input_relationship["column_name"],
+                        "cardinality": "many" if column_array_of else "one"
+                      }
+            }
+            for input_relationship in input_relationships]
 
     column = {
         "name": column_name,
@@ -150,9 +152,7 @@ def validate_table_and_column(table_name, column_name, column_datatype, input_ta
         if input_table_name == table_name:
             for input_column in input_tables[input_table_name]["columns"]:
                 if input_column["name"] == column_name:
-                    if input_column["datatype"] != column_datatype:
-                        return False
-                    return True
+                    return input_column["datatype"] == column_datatype
 
     return False
 
