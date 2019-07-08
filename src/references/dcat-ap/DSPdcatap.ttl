@@ -1,3 +1,4 @@
+##
 # baseURI: http://datamodel.terra.bio/DSPdcat_ap
 # imports: http://purl.obolibrary.org/obo/duo-basic.owl
 # imports: http://www.w3.org/ns/dcat
