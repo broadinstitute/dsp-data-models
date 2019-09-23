@@ -3,7 +3,8 @@
   "columns": [
     {
       "name": "id",
-      "datatype": "integer"
+      "datatype": "string",
+      "primary_key": true
     },
     {
       "name": "type",
@@ -18,22 +19,23 @@
       "datatype": "string"
     },
     {
-      "name": "variation_archive_id",
+      "name": "variation_archive_accession",
       "datatype": "string",
       "links": [
         {
           "table_name": "variation_archive",
-          "column_name": "id"
+          "column_name": "accession"
         }
       ]
     },
     {
-      "name": "rcv_accession_id",
+      "name": "rcv_accessions",
       "datatype": "string",
+      "array_of": true,
       "links": [
         {
           "table_name": "rcv_accession",
-          "column_name": "id"
+          "column_name": "accession"
         }
       ]
     }

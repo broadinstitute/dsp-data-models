@@ -3,7 +3,8 @@
   "columns": [
     {
       "name": "id",
-      "datatype": "integer"
+      "datatype": "string",
+      "primary_key": true
     },
     {
       "name": "submitter_name",
@@ -16,16 +17,6 @@
     {
       "name": "org_abbrev",
       "datatype": "string"
-    },
-    {
-      "name": "clinical_assertion_id",
-      "datatype": "string",
-      "links": [
-        {
-          "table_name": "clinical_assertion",
-          "column_name": "id"
-        }
-      ]
     }
   ]
 }

@@ -2,12 +2,9 @@
   "name": "variation_archive",
   "columns": [
     {
-      "name": "id",
-      "datatype": "string"
-    },
-    {
       "name": "accession",
-      "datatype": "string"
+      "datatype": "string",
+      "primary_key": true
     },
     {
       "name": "version",

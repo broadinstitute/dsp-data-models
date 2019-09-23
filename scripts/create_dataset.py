@@ -74,7 +74,7 @@ def create_table_and_relationships(input_table, input_tables):
     """
 
     input_table_name = input_table["name"]
-    columns, table_relationships = [], []
+    columns, table_relationships, primary_keys = [], [], []
     for input_column in input_table["columns"]:
         column, new_relationships = create_column_and_relationships(input_relationships=input_column.get("links"),
                                                                     column_name=input_column["name"],
@@ -84,8 +84,10 @@ def create_table_and_relationships(input_table, input_tables):
                                                                     input_tables=input_tables)
         columns.append(column)
         table_relationships.extend(new_relationships)
+        if input_column.get("primary_key"):
+            primary_keys.append(input_column["name"])
 
-    table = {"name": input_table_name, "columns": columns}
+    table = {"name": input_table_name, "columns": columns, "primaryKey": primary_keys}
 
     return table, table_relationships
 
