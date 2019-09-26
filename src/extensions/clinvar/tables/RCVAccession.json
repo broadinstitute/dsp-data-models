@@ -49,11 +49,21 @@
       ]
     },
     {
-      "name": "variation_archive_variation_id",
+      "name": "variation_id",
       "datatype": "string",
       "links": [
         {
-          "table_name": "variation_archive_variation",
+          "table_name": "variation",
+          "column_name": "id"
+        }
+      ]
+    },
+    {
+      "name": "trait_set_id",
+      "datatype": "string",
+      "links": [
+        {
+          "table_name": "trait_set",
           "column_name": "id"
         }
       ]

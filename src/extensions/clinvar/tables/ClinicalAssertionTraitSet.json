@@ -25,11 +25,11 @@
       ]
     },
     {
-      "name": "variation_archive_trait_set_id",
+      "name": "trait_set_id",
       "datatype": "string",
       "links": [
         {
-          "table_name": "variation_archive_trait_set",
+          "table_name": "trait_set",
           "column_name": "id"
         }
       ]

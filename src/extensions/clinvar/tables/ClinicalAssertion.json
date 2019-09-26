@@ -63,9 +63,8 @@
       "datatype": "string"
     },
     {
-      "name": "rcv_accession_ids",
+      "name": "rcv_accession_id",
       "datatype": "string",
-      "array_of": true,
       "links": [
         {
           "table_name": "rcv_accession",
@@ -84,11 +83,11 @@
       ]
     },
     {
-      "name": "variation_archive_variation_id",
+      "name": "variation_id",
       "datatype": "string",
       "links": [
         {
-          "table_name": "variation_archive_variation",
+          "table_name": "variation",
           "column_name": "id"
         }
       ]

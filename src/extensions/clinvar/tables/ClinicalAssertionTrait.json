@@ -37,11 +37,11 @@
       ]
     },
     {
-      "name": "variation_archive_trait_id",
+      "name": "trait_id",
       "datatype": "string",
       "links": [
         {
-          "table_name": "variation_archive_trait",
+          "table_name": "trait",
           "column_name": "id"
         }
       ]
