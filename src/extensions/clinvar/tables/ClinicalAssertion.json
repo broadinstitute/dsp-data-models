@@ -2,7 +2,7 @@
   "name": "clinical_assertion",
   "columns": [
     {
-      "name": "accession",
+      "name": "id",
       "datatype": "string",
       "primary_key": true
     },
@@ -63,23 +63,23 @@
       "datatype": "string"
     },
     {
-      "name": "rcv_accessions",
+      "name": "rcv_accession_ids",
       "datatype": "string",
       "array_of": true,
       "links": [
         {
           "table_name": "rcv_accession",
-          "column_name": "accession"
+          "column_name": "id"
         }
       ]
     },
     {
-      "name": "variation_archive_accession",
+      "name": "variation_archive_id",
       "datatype": "string",
       "links": [
         {
           "table_name": "variation_archive",
-          "column_name": "accession"
+          "column_name": "id"
         }
       ]
     },

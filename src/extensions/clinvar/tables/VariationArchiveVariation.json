@@ -40,17 +40,7 @@
       "datatype": "string"
     },
     {
-      "name": "parent_id",
-      "datatype": "string",
-      "links": [
-        {
-          "table_name": "variation_archive_variation",
-          "column_name": "id"
-        }
-      ]
-    },
-    {
-      "name": "parent_ids",
+      "name": "child_ids",
       "datatype": "string",
       "array_of": true,
       "links": [
@@ -61,23 +51,13 @@
       ]
     },
     {
-      "name": "variation_archive_accession",
-      "datatype": "string",
-      "links": [
-        {
-          "table_name": "variation_archive",
-          "column_name": "accession"
-        }
-      ]
-    },
-    {
-      "name": "rcv_accessions",
+      "name": "descendant_ids",
       "datatype": "string",
       "array_of": true,
       "links": [
         {
-          "table_name": "rcv_accession",
-          "column_name": "accession"
+          "table_name": "variation_archive_variation",
+          "column_name": "id"
         }
       ]
     }

@@ -2,7 +2,7 @@
   "name": "variation_archive",
   "columns": [
     {
-      "name": "accession",
+      "name": "id",
       "datatype": "string",
       "primary_key": true
     },
@@ -43,8 +43,18 @@
       "datatype": "string"
     },
     {
-      "name": "variation_archive_release_date",
+      "name": "release_date",
       "datatype": "date"
+    },
+    {
+      "name": "variation_archive_variation_id",
+      "datatype": "string",
+      "links": [
+        {
+          "table_name": "variation_archive_variation",
+          "column_name": "id"
+        }
+      ]
     }
   ]
 }

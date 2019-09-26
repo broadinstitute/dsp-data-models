@@ -15,12 +15,12 @@
       "datatype": "string"
     },
     {
-      "name": "clinical_assertion_accession",
+      "name": "clinical_assertion_id",
       "datatype": "string",
       "links": [
         {
           "table_name": "clinical_assertion",
-          "column_name": "accession"
+          "column_name": "id"
         }
       ]
     },
