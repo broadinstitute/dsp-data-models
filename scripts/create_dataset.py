@@ -2,6 +2,7 @@
 import os
 import argparse
 import json
+import uuid
 
 
 def make_new_dataset(dataset_name, dataset_description, input_tables_directory, input_assets_directory, output_name):
@@ -119,10 +120,7 @@ def create_column_and_relationships(input_relationships,
 
         relationships = [
             {
-                "name": "{}_{}_to_{}_{}".format(input_table_name,
-                                                column_name,
-                                                input_relationship["table_name"],
-                                                input_relationship["column_name"]),
+                "name": str(uuid.uuid4()),
                 "from": {"table": input_table_name, "column": column_name, "cardinality": "one"},
                 "to": {
                         "table": input_relationship["table_name"],
