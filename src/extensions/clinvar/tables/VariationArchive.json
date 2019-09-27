@@ -43,10 +43,6 @@
       "datatype": "string"
     },
     {
-      "name": "release_date",
-      "datatype": "date"
-    },
-    {
       "name": "variation_id",
       "datatype": "string",
       "links": [
