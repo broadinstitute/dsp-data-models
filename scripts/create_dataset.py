@@ -5,11 +5,13 @@ import json
 import uuid
 
 
-def make_new_dataset(dataset_name, dataset_description, input_tables_directory, input_assets_directory, output_name):
+def make_new_dataset(dataset_name, dataset_description, dataset_profile_id,
+                     input_tables_directory, input_assets_directory, output_name):
     """
     Adds JSON files for assets and tables to a dataset, generates relationships and then writes the final JSON to disk.
     :param dataset_name: the schema name for the dataset
     :param dataset_description: description of the schema
+    :param dataset_profile_id: UUID of the billing profile the dataset should use
     :param input_tables_directory: the directory containing tables JSON files
     :param input_assets_directory: the directory containing assets JSON files
     :param output_name: the name of the output JSON, containing the combined assets, relationships and tables JSONs
@@ -31,6 +33,7 @@ def make_new_dataset(dataset_name, dataset_description, input_tables_directory, 
     dataset = {
         "name": dataset_name,
         "description": dataset_description,
+        "defaultProfileId": dataset_profile_id,
         "schema": {"tables": tables, "relationships": relationships, "assets": assets}
     }
     save_dataset_as_json(dataset=dataset, output_name=output_name)
@@ -180,6 +183,11 @@ if __name__ == "__main__":
                         dest="dataset_description",
                         required=True,
                         help="description of the schema")
+    parser.add_argument("--dataset-profile-id",
+                        "-p",
+                        dest="dataset_profile_id",
+                        required=True,
+                        help="UUID for the billing profile the dataset should use")
     parser.add_argument("--input-tables-directory",
                         "-t",
                         dest="input_tables_directory",
@@ -199,6 +207,7 @@ if __name__ == "__main__":
 
     make_new_dataset(dataset_name=args.dataset_name,
                      dataset_description=args.dataset_description,
+                     dataset_profile_id=args.dataset_profile_id,
                      input_tables_directory=args.input_tables_directory,
                      input_assets_directory=args.input_assets_directory,
                      output_name=args.output_name)
