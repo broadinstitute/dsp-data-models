@@ -49,6 +49,16 @@
           "column_name": "id"
         }
       ]
+    },
+    {
+      "name": "gene_id",
+      "datatype": "string",
+      "links": [
+        {
+          "table_name": "gene",
+          "column_name": "id"
+        }
+      ]
     }
   ]
 }
